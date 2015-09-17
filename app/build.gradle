@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "io.futurestud.tutorials.glide"
+
+        minSdkVersion 14
+        targetSdkVersion 23
+
+        versionCode 1
+        versionName "1.0"
+
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        tutorial {
+            applicationId "io.futurestud.tutorials.glide"
+            versionCode 1
+            versionName "1.0.0"
+        }
+    }
+
+    // only necessary for ButterKnife, not for Picasso!
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+}
+
+dependencies {
+    // Android's support library for the framework (not necessary for Picasso)
+    compile 'com.android.support:appcompat-v7:23.0.0'
+    compile 'com.android.support:support-v4:23.0.0'
+
+    // image loading library Picasso
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.squareup.okhttp:okhttp:2.2.0'
+
+    // image loading library Glide
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+
+    // just a little view helper to makes things easier for us
+    // not necessary for using Picasso
+    compile 'com.jakewharton:butterknife:6.1.0'
+}

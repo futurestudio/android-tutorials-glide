@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="io.futurestud.tutorials.glide"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="io.futurestud.tutorials.glide.ui.activities.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleSimpleLoading"
+            android:label="Simple Loading"/>
+
+        <activity
+            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleListViewAdapter"
+            android:label="ListView Example"/>
+
+        <activity
+            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleGridViewAdapter"
+            android:label="GridView Example"/>
+
+        <activity
+            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExamplePlaceholdersAndErrors"
+            android:label="Placeholders"/>
+
+        <activity
+            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleImageResizing"
+            android:label="Image Manipulation"/>
+
+        <activity
+            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleRequestPriority"
+            android:label="Request Priority"/>
+
+        <activity
+            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleRotationTransformation"
+            android:label="Rotation and Transformation"/>
+
+        <activity
+            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleTargetsAndRemoteViews"
+            android:label="Rotation and Transformation"/>
+
+        <activity
+            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleLoggingAndStats"
+            android:label="Cache Indicators, Logging and Stats"/>
+
+        <activity
+            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExamplePicassoBuilderBasics"
+            android:label="Picasso.Builder Basics"/>
+
+        <activity
+            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExamplePicassoBuilderRequestHandler"
+            android:label="Custom Request Handlers"/>
+
+    </application>
+
+</manifest>

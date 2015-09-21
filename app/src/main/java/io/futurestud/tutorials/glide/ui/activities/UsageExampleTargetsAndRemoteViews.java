@@ -7,7 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.RemoteViews;
 
 import com.squareup.picasso.Picasso;
@@ -16,7 +16,7 @@ import com.squareup.picasso.Target;
 import butterknife.ButterKnife;
 import io.futurestud.tutorials.glide.R;
 
-public class UsageExampleTargetsAndRemoteViews extends ActionBarActivity {
+public class UsageExampleTargetsAndRemoteViews extends AppCompatActivity {
 
     private static final int NOTIFICATION_ID = 34567;
 

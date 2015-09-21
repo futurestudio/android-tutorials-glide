@@ -3,6 +3,7 @@ package io.futurestud.tutorials.glide.ui.activities;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ImageView;
 
@@ -16,7 +17,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
 
-public class UsageExampleLoggingAndStats extends ActionBarActivity {
+public class UsageExampleLoggingAndStats extends AppCompatActivity {
 
     @InjectView(R.id.standard_list_imageview1) ImageView imageViewFromMemory;
     @InjectView(R.id.standard_list_imageview2) ImageView imageViewFromDisk;

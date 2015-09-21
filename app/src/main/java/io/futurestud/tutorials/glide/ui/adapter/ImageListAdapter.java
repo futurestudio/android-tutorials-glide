@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 import io.futurestud.tutorials.glide.R;
 
@@ -35,10 +35,9 @@ public class ImageListAdapter extends ArrayAdapter {
             convertView = inflater.inflate(R.layout.listview_item_image, parent, false);
         }
 
-        Picasso
-                .with(context)
+        Glide
+                .with( context )
                 .load(imageUrls[position])
-                .fit() // will explain later
                 .into((ImageView) convertView);
 
         return convertView;

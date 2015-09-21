@@ -2,6 +2,7 @@ package io.futurestud.tutorials.glide.ui.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.GridView;
 
 import butterknife.ButterKnife;
@@ -9,7 +10,7 @@ import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
 import io.futurestud.tutorials.glide.ui.adapter.ImageListAdapter;
 
-public class UsageExampleGridViewAdapter extends ActionBarActivity {
+public class UsageExampleGridViewAdapter extends AppCompatActivity {
 
     @InjectView(R.id.usage_example_gridview) GridView gridView;
 

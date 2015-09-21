@@ -1,7 +1,7 @@
 package io.futurestud.tutorials.glide.ui.activities;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 import butterknife.ButterKnife;
@@ -9,7 +9,7 @@ import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
 import io.futurestud.tutorials.glide.ui.adapter.ImageListAdapter;
 
-public class UsageExampleListViewAdapter extends ActionBarActivity {
+public class UsageExampleListViewAdapter extends AppCompatActivity {
 
     public static String[] eatFoodyImages = {
             "http://i.imgur.com/rFLNqWI.jpg",

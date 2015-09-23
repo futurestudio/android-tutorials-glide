@@ -2,12 +2,10 @@ package io.futurestud.tutorials.glide.ui.activities;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
-import com.squareup.picasso.Callback;
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -17,7 +15,7 @@ public class UsageExamplePlaceholdersAndErrors extends AppCompatActivity {
 
     @InjectView(R.id.standard_list_imageview1) ImageView imageViewPlaceholder;
     @InjectView(R.id.standard_list_imageview2) ImageView imageViewError;
-    @InjectView(R.id.standard_list_imageview3) ImageView imageViewFade;
+    @InjectView(R.id.standard_list_imageview3) ImageView imageViewNoFade;
     @InjectView(R.id.standard_list_imageview4) ImageView imageViewCombined;
     @InjectView(R.id.standard_list_imageview5) ImageView imageViewNoPlaceholder;
 
@@ -32,49 +30,51 @@ public class UsageExamplePlaceholdersAndErrors extends AppCompatActivity {
 
         loadImageWithPlaceholder();
         loadImageWithError();
-        loadImageNoFade();
+        loadImageNoAnimation();
         loadImageCombination();
 
         loadImageWithNoPlaceholder();
     }
 
     private void loadImageWithPlaceholder() {
-        Picasso
-                .with(context)
+        Glide
+                .with( context )
                 .load(UsageExampleListViewAdapter.eatFoodyImages[0])
                 .placeholder(R.mipmap.ic_launcher) // can also be a drawable
                 .into(imageViewPlaceholder);
     }
 
     private void loadImageWithError() {
-        Picasso
+        Glide
                 .with(context)
                 .load("http://futurestud.io/non_existing_image.png")
                 .error(R.mipmap.future_studio_launcher) // will be displayed if the image cannot be loaded
-                .into(imageViewError);
+                .into( imageViewError );
     }
 
-    private void loadImageNoFade() {
-        Picasso
+    private void loadImageNoAnimation() {
+        Glide
                 .with(context)
                 .load(UsageExampleListViewAdapter.eatFoodyImages[0])
-                .noFade()
-                .into(imageViewFade);
+                .dontAnimate()
+                .into( imageViewNoFade );
     }
 
     private void loadImageCombination() {
-        Picasso
+        Glide
                 .with(context)
                 .load(UsageExampleListViewAdapter.eatFoodyImages[0])
                 .placeholder(R.mipmap.ic_launcher) // can also be a drawable
                 .error(R.mipmap.future_studio_launcher) // will be displayed if the image cannot be loaded
-                .noFade()
-                .into(imageViewCombined);
+                .crossFade( 1000 )
+                .into( imageViewCombined);
     }
 
     private void loadImageWithNoPlaceholder() {
+        // todo figure out if this is supported by glide
         // load an image into the imageview
-        Picasso
+        /*
+        Glide
                 .with(context)
                 .load(UsageExampleListViewAdapter.eatFoodyImages[0])
                 .placeholder(R.mipmap.ic_launcher) // can also be a drawable
@@ -94,7 +94,7 @@ public class UsageExamplePlaceholdersAndErrors extends AppCompatActivity {
 
                     }
                 });
-
+        */
 
     }
 }

@@ -55,6 +55,10 @@
             android:label="Rotation and Transformation"/>
 
         <activity
+            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleGifAndVideos"
+            android:label="Gif and Local Videos"/>
+
+        <activity
             android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleLoggingAndStats"
             android:label="Cache Indicators, Logging and Stats"/>
 

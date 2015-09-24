@@ -50,26 +50,30 @@ public class MainActivity extends ListActivity {
                 break;
 
             case 5:
-                showExampleActivity(UsageExampleRequestPriority.class);
+                showExampleActivity(UsageExampleGifAndVideos.class);
                 break;
 
             case 6:
-                showExampleActivity(UsageExampleTargetsAndRemoteViews.class);
+                showExampleActivity(UsageExampleRequestPriority.class);
                 break;
 
             case 7:
+                showExampleActivity(UsageExampleTargetsAndRemoteViews.class);
+                break;
+
+            case 8:
                 showExampleActivity(UsageExampleRotationTransformation.class);
                 break;
 
-            case 9:
+            case 10:
                 showExampleActivity(UsageExampleLoggingAndStats.class);
                 break;
 
-            case 10:
+            case 11:
                 showExampleActivity(UsageExamplePicassoBuilderBasics.class);
                 break;
 
-            case 11:
+            case 12:
                 showExampleActivity(UsageExamplePicassoBuilderRequestHandler.class);
                 break;
 

@@ -23,10 +23,10 @@ public class UsageExamplePlaceholdersAndErrors extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate( savedInstanceState );
 
-        setContentView(R.layout.activity_standard_imageview);
-        ButterKnife.inject(this);
+        setContentView( R.layout.activity_standard_imageview );
+        ButterKnife.inject( this );
 
         loadImageWithPlaceholder();
         loadImageWithError();
@@ -40,8 +40,8 @@ public class UsageExamplePlaceholdersAndErrors extends AppCompatActivity {
         Glide
                 .with( context )
                 .load(UsageExampleListViewAdapter.eatFoodyImages[0])
-                .placeholder(R.mipmap.ic_launcher) // can also be a drawable
-                .into(imageViewPlaceholder);
+                .placeholder( R.mipmap.ic_launcher ) // can also be a drawable
+                .into( imageViewPlaceholder );
     }
 
     private void loadImageWithError() {
@@ -67,7 +67,7 @@ public class UsageExamplePlaceholdersAndErrors extends AppCompatActivity {
                 .placeholder(R.mipmap.ic_launcher) // can also be a drawable
                 .error(R.mipmap.future_studio_launcher) // will be displayed if the image cannot be loaded
                 .crossFade( 1000 )
-                .into( imageViewCombined);
+                .into( imageViewCombined );
     }
 
     private void loadImageWithNoPlaceholder() {

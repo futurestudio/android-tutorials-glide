@@ -28,14 +28,15 @@ public class MenuContent {
         addItem(new DummyItem("1", "Adapter Use - ListView"));
         addItem(new DummyItem("2", "Adapter Use - GridView"));
         addItem(new DummyItem("3", "Placeholder, Error & Fading"));
-        addItem(new DummyItem("4", "Image Resizing, Cropping and fit()"));
-        addItem(new DummyItem("5", "Picasso Priority"));
-        addItem(new DummyItem("6", "Callbacks, RemoteViews & Notifications"));
-        addItem(new DummyItem("7", "Rotation and Transformation"));
-        addItem(new DummyItem("8", "Influencing Image Caching"));
-        addItem(new DummyItem("9", "Cache Indicators, Logging & Stats"));
-        addItem(new DummyItem("10", "Picasso.Builder Basics"));
-        addItem(new DummyItem("11", "Custom Request Handlers"));
+        addItem(new DummyItem("4", "Image Resizing, Scaling"));
+        addItem(new DummyItem("5", "Gif & Local Videos"));
+        addItem(new DummyItem("6", "Picasso Priority"));
+        addItem(new DummyItem("7", "Callbacks, RemoteViews & Notifications"));
+        addItem(new DummyItem("8", "Rotation and Transformation"));
+        addItem(new DummyItem("9", "Influencing Image Caching"));
+        addItem(new DummyItem("10", "Cache Indicators, Logging & Stats"));
+        addItem(new DummyItem("11", "Picasso.Builder Basics"));
+        addItem(new DummyItem("12", "Custom Request Handlers"));
     }
 
     private static void addItem(DummyItem item) {

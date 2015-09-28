@@ -15,7 +15,7 @@ public class UsageExampleImageResizing extends AppCompatActivity {
 
     @InjectView(R.id.standard_list_imageview1) ImageView imageViewResize;
     @InjectView(R.id.standard_list_imageview2) ImageView imageViewResizeCenterCrop;
-    @InjectView(R.id.standard_list_imageview3) ImageView imageViewResizeCenterInside;
+    @InjectView(R.id.standard_list_imageview3) ImageView imageViewResizeFitCenter;
     @InjectView(R.id.standard_list_imageview4) ImageView imageViewResizeScaleDown;
     @InjectView(R.id.standard_list_imageview5) ImageView imageViewFit;
 
@@ -23,24 +23,23 @@ public class UsageExampleImageResizing extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState );
 
-        setContentView(R.layout.activity_standard_imageview);
-        ButterKnife.inject(this);
+        setContentView(R.layout.activity_standard_imageview );
+        ButterKnife.inject(this );
 
         loadImageWithResize();
         loadImageWithResizeCenterCrop();
-        loadImageWithResizeCenterInside();
+        loadImageWithResizeFitCenter();
         loadImageWithResizeScaleDown();
-        loadImageWithFit();
     }
 
     private void loadImageWithResize() {
         Glide
                 .with( context )
-                .load(UsageExampleListViewAdapter.eatFoodyImages[0])
+                .load(UsageExampleListViewAdapter.eatFoodyImages[0] )
                 .override( 600, 200 ) // resizes the image to these dimensions (in pixel). does not respect aspect ratio
-                .into(imageViewResize);
+                .into(imageViewResize );
     }
 
     private void loadImageWithResizeCenterCrop() {
@@ -49,16 +48,16 @@ public class UsageExampleImageResizing extends AppCompatActivity {
                 .load(UsageExampleListViewAdapter.eatFoodyImages[0])
                 .override( 600, 200 ) // resizes the image to these dimensions (in pixel)
                 .centerCrop() // this cropping technique scales the image so that it fills the requested bounds and then crops the extra.
-                .into(imageViewResizeCenterCrop);
+                .into(imageViewResizeCenterCrop );
     }
 
-    private void loadImageWithResizeCenterInside() {
+    private void loadImageWithResizeFitCenter() {
         Glide
                 .with(context)
                 .load(UsageExampleListViewAdapter.eatFoodyImages[0])
                 .override(600, 200)
                 .fitCenter() // this scales the image so that both dimensions are equal to or less than the requested bounds.
-                .into( imageViewResizeCenterInside );
+                .into( imageViewResizeFitCenter );
     }
 
     private void loadImageWithResizeScaleDown() {
@@ -71,17 +70,5 @@ public class UsageExampleImageResizing extends AppCompatActivity {
                 .onlyScaleDown() // the image will only be resized if it's bigger than 6000x2000 pixels.
                 .into(imageViewResizeScaleDown);
             */
-    }
-
-    private void loadImageWithFit() {
-        // todo figure out if this is possible with glide
-        /*
-        Glide
-                .with(context)
-                .load(UsageExampleListViewAdapter.eatFoodyImages[0])
-                .fit()
-                        // call  .centerInside() or .centerCrop() to avoid a stretched image
-                .into(imageViewFit);
-                */
     }
 }

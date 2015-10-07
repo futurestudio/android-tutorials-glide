@@ -70,7 +70,7 @@ public class MainActivity extends ListActivity {
                 break;
 
             case 11:
-                showExampleActivity(UsageExamplePicassoBuilderBasics.class);
+                showExampleActivity(UsageExampleGlideModuleUnsafeOkHttp.class);
                 break;
 
             case 12:

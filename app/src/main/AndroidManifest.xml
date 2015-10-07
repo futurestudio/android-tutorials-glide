@@ -12,6 +12,13 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
 
+        <!-- for images behind an unsafe https url -->
+        <!--
+        <meta-data
+            android:name="io.futurestud.tutorials.glide.okhttp.UnsafeOkHttpGlideModule"
+            android:value="GlideModule" />
+        -->
+
         <activity
             android:name="io.futurestud.tutorials.glide.ui.activities.MainActivity"
             android:label="@string/app_name">
@@ -63,7 +70,7 @@
             android:label="Cache Indicators, Logging and Stats"/>
 
         <activity
-            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExamplePicassoBuilderBasics"
+            android:name=".ui.activities.UsageExampleGlideModuleUnsafeOkHttp"
             android:label="Picasso.Builder Basics"/>
 
         <activity

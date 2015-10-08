@@ -51,7 +51,11 @@
 
         <activity
             android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleCacheBasics"
-            android:label="Image Manipulation"/>
+            android:label="Cache Basics"/>
+
+        <activity
+            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleThumbnails"
+            android:label="Thumbnails"/>
 
         <activity
             android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleRequestPriority"

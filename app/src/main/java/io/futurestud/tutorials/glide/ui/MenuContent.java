@@ -13,6 +13,7 @@ import io.futurestud.tutorials.glide.ui.activities.UsageExampleListViewAdapter;
 import io.futurestud.tutorials.glide.ui.activities.UsageExamplePlaceholdersAndErrors;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleRequestPriority;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleSimpleLoading;
+import io.futurestud.tutorials.glide.ui.activities.UsageExampleThumbnails;
 
 /**
  * Helper class for providing sample content for user interfaces created by
@@ -41,6 +42,7 @@ public class MenuContent {
         addItem(new DummyItem("5", "Gif & Local Videos", UsageExampleGifAndVideos.class));
         addItem(new DummyItem("6", "Glide Cache Basics", UsageExampleCacheBasics.class));
         addItem(new DummyItem("7", "Glide Priority", UsageExampleRequestPriority.class));
+        addItem(new DummyItem("8", "Thumbnails", UsageExampleThumbnails.class));
         addItem(new DummyItem("8", "Callbacks, RemoteViews & Notifications", UsageExampleSimpleLoading.class));
         addItem(new DummyItem("9", "Rotation and Transformation", UsageExampleSimpleLoading.class));
         addItem(new DummyItem("10", "Influencing Image Caching", UsageExampleSimpleLoading.class));

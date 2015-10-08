@@ -24,7 +24,7 @@ public class UsageExampleGifAndVideos extends AppCompatActivity {
 
     private Context context = this;
 
-    private String gifUrl = "http://i.kinja-img.com/gawker-media/image/upload/s--B7tUiM5l--/gf2r69yorbdesguga10i.gif";
+    public static String gifUrl = "http://i.kinja-img.com/gawker-media/image/upload/s--B7tUiM5l--/gf2r69yorbdesguga10i.gif";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

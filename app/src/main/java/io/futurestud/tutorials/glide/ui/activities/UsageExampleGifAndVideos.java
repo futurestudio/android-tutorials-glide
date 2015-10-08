@@ -53,6 +53,7 @@ public class UsageExampleGifAndVideos extends AppCompatActivity {
                 .with( context )
                 .load( gifUrl )
                 .asBitmap()
+                .thumbnail( 0.5f )
                 .placeholder( R.drawable.cupcake )
                 .into( imageViewGifAsBitmap );
     }

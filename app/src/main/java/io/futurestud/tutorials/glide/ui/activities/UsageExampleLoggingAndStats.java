@@ -2,7 +2,6 @@ package io.futurestud.tutorials.glide.ui.activities;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ImageView;
@@ -17,6 +16,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
 
+@Deprecated
 public class UsageExampleLoggingAndStats extends AppCompatActivity {
 
     @InjectView(R.id.standard_list_imageview1) ImageView imageViewFromMemory;

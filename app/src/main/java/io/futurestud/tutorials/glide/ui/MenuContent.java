@@ -5,6 +5,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import io.futurestud.tutorials.glide.ui.activities.UsageExampleCacheBasics;
+import io.futurestud.tutorials.glide.ui.activities.UsageExampleGifAndVideos;
+import io.futurestud.tutorials.glide.ui.activities.UsageExampleGridViewAdapter;
+import io.futurestud.tutorials.glide.ui.activities.UsageExampleImageResizing;
+import io.futurestud.tutorials.glide.ui.activities.UsageExampleListViewAdapter;
+import io.futurestud.tutorials.glide.ui.activities.UsageExamplePlaceholdersAndErrors;
+import io.futurestud.tutorials.glide.ui.activities.UsageExampleRequestPriority;
+import io.futurestud.tutorials.glide.ui.activities.UsageExampleSimpleLoading;
+
 /**
  * Helper class for providing sample content for user interfaces created by
  * Android template wizards.
@@ -24,19 +33,20 @@ public class MenuContent {
     public static Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
 
     static {
-        addItem(new DummyItem("0", "Simple Image Loading"));
-        addItem(new DummyItem("1", "Adapter Use - ListView"));
-        addItem(new DummyItem("2", "Adapter Use - GridView"));
-        addItem(new DummyItem("3", "Placeholder, Error & Fading"));
-        addItem(new DummyItem("4", "Image Resizing, Scaling"));
-        addItem(new DummyItem("5", "Gif & Local Videos"));
-        addItem(new DummyItem("6", "Picasso Priority"));
-        addItem(new DummyItem("7", "Callbacks, RemoteViews & Notifications"));
-        addItem(new DummyItem("8", "Rotation and Transformation"));
-        addItem(new DummyItem("9", "Influencing Image Caching"));
-        addItem(new DummyItem("10", "Cache Indicators, Logging & Stats"));
-        addItem(new DummyItem("11", "Picasso.Builder Basics"));
-        addItem(new DummyItem("12", "Custom Request Handlers"));
+        addItem(new DummyItem("0", "Simple Image Loading", UsageExampleSimpleLoading.class));
+        addItem(new DummyItem("1", "Adapter Use - ListView", UsageExampleListViewAdapter.class));
+        addItem(new DummyItem("2", "Adapter Use - GridView", UsageExampleGridViewAdapter.class));
+        addItem(new DummyItem("3", "Placeholder, Error & Fading", UsageExamplePlaceholdersAndErrors.class));
+        addItem(new DummyItem("4", "Image Resizing, Scaling", UsageExampleImageResizing.class));
+        addItem(new DummyItem("5", "Gif & Local Videos", UsageExampleGifAndVideos.class));
+        addItem(new DummyItem("6", "Glide Cache Basics", UsageExampleCacheBasics.class));
+        addItem(new DummyItem("7", "Glide Priority", UsageExampleRequestPriority.class));
+        addItem(new DummyItem("8", "Callbacks, RemoteViews & Notifications", UsageExampleSimpleLoading.class));
+        addItem(new DummyItem("9", "Rotation and Transformation", UsageExampleSimpleLoading.class));
+        addItem(new DummyItem("10", "Influencing Image Caching", UsageExampleSimpleLoading.class));
+        addItem(new DummyItem("11", "Cache Indicators, Logging & Stats", UsageExampleSimpleLoading.class));
+        addItem(new DummyItem("12", "Picasso.Builder Basics", UsageExampleSimpleLoading.class));
+        addItem(new DummyItem("13", "Custom Request Handlers", UsageExampleSimpleLoading.class));
     }
 
     private static void addItem(DummyItem item) {
@@ -50,10 +60,12 @@ public class MenuContent {
     public static class DummyItem {
         public String id;
         public String content;
+        public Class goalClass;
 
-        public DummyItem(String id, String content) {
+        public DummyItem(String id, String content, Class goalClass) {
             this.id = id;
             this.content = content;
+            this.goalClass = goalClass;
         }
 
         @Override

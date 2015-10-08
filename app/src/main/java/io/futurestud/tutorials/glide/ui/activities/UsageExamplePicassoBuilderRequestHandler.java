@@ -18,6 +18,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
 
+@Deprecated
 public class UsageExamplePicassoBuilderRequestHandler extends AppCompatActivity {
 
     @InjectView(R.id.standard_list_imageview1) ImageView imageView1;

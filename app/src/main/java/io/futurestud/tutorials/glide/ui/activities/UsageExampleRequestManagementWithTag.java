@@ -13,6 +13,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
 
+@Deprecated
 public class UsageExampleRequestManagementWithTag extends AppCompatActivity {
 
     @InjectView(R.id.standard_list_imageview1) ImageView imageViewResize;

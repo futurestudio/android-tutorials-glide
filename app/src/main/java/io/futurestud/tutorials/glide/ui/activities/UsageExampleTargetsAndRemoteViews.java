@@ -16,6 +16,7 @@ import com.squareup.picasso.Target;
 import butterknife.ButterKnife;
 import io.futurestud.tutorials.glide.R;
 
+@Deprecated
 public class UsageExampleTargetsAndRemoteViews extends AppCompatActivity {
 
     private static final int NOTIFICATION_ID = 34567;

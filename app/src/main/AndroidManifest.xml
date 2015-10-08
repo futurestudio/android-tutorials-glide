@@ -50,6 +50,10 @@
             android:label="Image Manipulation"/>
 
         <activity
+            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleCacheBasics"
+            android:label="Image Manipulation"/>
+
+        <activity
             android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleRequestPriority"
             android:label="Request Priority"/>
 

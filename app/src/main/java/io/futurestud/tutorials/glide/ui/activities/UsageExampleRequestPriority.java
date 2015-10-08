@@ -12,6 +12,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
 
+@Deprecated
 public class UsageExampleRequestPriority extends AppCompatActivity {
 
     @InjectView(R.id.activity_request_priority_hero) ImageView imageViewHero;

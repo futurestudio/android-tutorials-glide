@@ -2,7 +2,6 @@ package io.futurestud.tutorials.glide.ui.activities;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
@@ -18,6 +17,7 @@ import io.futurestud.tutorials.glide.R;
 import io.futurestud.tutorials.glide.transformation.BlurTransformation;
 import io.futurestud.tutorials.glide.transformation.GrayscaleTransformation;
 
+@Deprecated
 public class UsageExampleRotationTransformation extends AppCompatActivity {
 
 

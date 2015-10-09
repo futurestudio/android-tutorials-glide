@@ -10,9 +10,11 @@ import io.futurestud.tutorials.glide.ui.activities.UsageExampleGifAndVideos;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleGridViewAdapter;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleImageResizing;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleListViewAdapter;
+import io.futurestud.tutorials.glide.ui.activities.UsageExamplePicassoBuilderRequestHandler;
 import io.futurestud.tutorials.glide.ui.activities.UsageExamplePlaceholdersAndErrors;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleRequestPriority;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleSimpleLoading;
+import io.futurestud.tutorials.glide.ui.activities.UsageExampleTargetsAndRemoteViews;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleThumbnails;
 
 /**
@@ -43,12 +45,13 @@ public class MenuContent {
         addItem(new DummyItem("6", "Glide Cache Basics", UsageExampleCacheBasics.class));
         addItem(new DummyItem("7", "Glide Priority", UsageExampleRequestPriority.class));
         addItem(new DummyItem("8", "Thumbnails", UsageExampleThumbnails.class));
-        addItem(new DummyItem("8", "Callbacks, RemoteViews & Notifications", UsageExampleSimpleLoading.class));
-        addItem(new DummyItem("9", "Rotation and Transformation", UsageExampleSimpleLoading.class));
-        addItem(new DummyItem("10", "Influencing Image Caching", UsageExampleSimpleLoading.class));
-        addItem(new DummyItem("11", "Cache Indicators, Logging & Stats", UsageExampleSimpleLoading.class));
-        addItem(new DummyItem("12", "Picasso.Builder Basics", UsageExampleSimpleLoading.class));
-        addItem(new DummyItem("13", "Custom Request Handlers", UsageExampleSimpleLoading.class));
+        addItem(new DummyItem("8", "Callbacks, Targets & Notifications", UsageExampleTargetsAndRemoteViews.class));
+
+        addItem(new DummyItem("9", "Rotation and Transformation", UsageExamplePicassoBuilderRequestHandler.class));
+        addItem(new DummyItem("10", "Influencing Image Caching", UsageExamplePicassoBuilderRequestHandler.class));
+        addItem(new DummyItem("11", "Cache Indicators, Logging & Stats", UsageExamplePicassoBuilderRequestHandler.class));
+        addItem(new DummyItem("12", "Picasso.Builder Basics", UsageExamplePicassoBuilderRequestHandler.class));
+        addItem(new DummyItem("13", "Custom Request Handlers", UsageExamplePicassoBuilderRequestHandler.class));
     }
 
     private static void addItem(DummyItem item) {

@@ -1,100 +1,75 @@
 package io.futurestud.tutorials.glide.ui.activities;
 
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.app.NotificationCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.widget.RemoteViews;
 
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.GlideBitmapDrawable;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
 
-import butterknife.ButterKnife;
-import io.futurestud.tutorials.glide.R;
-
-@Deprecated
-public class UsageExampleTargetsAndRemoteViews extends AppCompatActivity {
+public class UsageExampleTargetsAndRemoteViews extends GlideExampleActivity {
 
     private static final int NOTIFICATION_ID = 34567;
 
-    private Context context = this;
-    private Target target = new Target() {
+    private SimpleTarget target = new SimpleTarget<GlideBitmapDrawable>() {
         @Override
-        public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
-            // loading of the bitmap was a success
-            // TODO do some action with the bitmap
+        public void onResourceReady(GlideBitmapDrawable bitmap, GlideAnimation glideAnimation) {
+            imageView1.setImageBitmap( bitmap.getBitmap() );
         }
+    };
 
+    private SimpleTarget target2 = new SimpleTarget<GlideBitmapDrawable>(250, 250) {
         @Override
-        public void onBitmapFailed(Drawable errorDrawable) {
-            // loading of the bitmap failed
-            // TODO do some action/warning/error message
-        }
-
-        @Override
-        public void onPrepareLoad(Drawable placeHolderDrawable) {
-
+        public void onResourceReady(GlideBitmapDrawable bitmap, GlideAnimation glideAnimation) {
+            imageView2.setImageBitmap( bitmap.getBitmap() );
         }
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate( savedInstanceState );
 
-        setContentView(R.layout.activity_standard_imageview);
-        ButterKnife.inject(this);
-
-        loadImageBitmapWithTarget();
-        loadImageBitmapForCustomNotification();
+        loadImageSimpleTarget();
+        loadImageSimpleTargetApplicationContext();
     }
 
-    private void loadImageBitmapWithTarget() {
-        Picasso
-                .with(context)
-                .load(UsageExampleListViewAdapter.eatFoodyImages[0])
-                .into(target);
+    private void loadImageSimpleTarget() {
+        Glide
+                .with( context ) // could be an issue!
+                .load( eatFoodyImages[0] )
+                .asBitmap()
+                .into( target );
     }
 
-    private void loadImageBitmapForCustomNotification() {
-        // create RemoteViews
-        final RemoteViews remoteViews = new RemoteViews(getPackageName(), R.layout.remoteview_notification);
-
-        remoteViews.setImageViewResource(R.id.remoteview_notification_icon, R.mipmap.future_studio_launcher);
-
-        remoteViews.setTextViewText(R.id.remoteview_notification_headline, "Headline");
-        remoteViews.setTextViewText(R.id.remoteview_notification_short_message, "Short Message");
-
-        remoteViews.setTextColor(R.id.remoteview_notification_headline, getResources().getColor(android.R.color.black));
-        remoteViews.setTextColor(R.id.remoteview_notification_short_message, getResources().getColor(android.R.color.black));
-
-        // build notification
-        NotificationCompat.Builder mBuilder =
-                new NotificationCompat.Builder(UsageExampleTargetsAndRemoteViews.this)
-                        .setSmallIcon(R.mipmap.future_studio_launcher)
-                        .setContentTitle("Content Title")
-                        .setContentText("Content Text")
-                        .setContent(remoteViews)
-                        .setPriority(NotificationCompat.PRIORITY_MIN);
-
-        final Notification notification = mBuilder.build();
-
-        // set big content view for newer androids
-        if (android.os.Build.VERSION.SDK_INT >= 16) {
-            notification.bigContentView = remoteViews;
-        }
-
-        NotificationManager mNotificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
-        mNotificationManager.notify(NOTIFICATION_ID, notification);
-
-        // load image with Picasso into the RemoteViews of the notification
-        Picasso
-                .with(UsageExampleTargetsAndRemoteViews.this)
-                .load(UsageExampleListViewAdapter.eatFoodyImages[0])
-                .into(remoteViews, R.id.remoteview_notification_icon, NOTIFICATION_ID, notification);
+    private void loadImageSimpleTargetApplicationContext() {
+        Glide
+                .with( context.getApplicationContext() ) // safer!
+                .load( eatFoodyImages[1] )
+                .asBitmap()
+                .into( target2 );
     }
 
+    // todo implement viewtargets
+    private void loadImageViewTarget() {
+        Glide
+                .with( context.getApplicationContext() ) // safer!
+                .load( eatFoodyImages[1] )
+                .asBitmap()
+                .into( target2 );
+    }
+
+    // todo add custom view class
+
+    /*
+    // todo remoteviews and notifications
+    private void loadImageSimpleTargetApplicationContext() {
+        Glide
+                .with( context.getApplicationContext() ) // safer!
+                .load( eatFoodyImages[0] )
+                .asBitmap()
+                .into( target2 );
+    }
+    */
+
+    // todo todo add appwidgets
 }

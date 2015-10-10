@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
+import io.futurestud.tutorials.glide.ui.views.FutureStudioView;
 
 
 public class GlideExampleActivity extends AppCompatActivity {
@@ -34,6 +35,7 @@ public class GlideExampleActivity extends AppCompatActivity {
     @InjectView(R.id.standard_list_imageview3) ImageView imageView3;
     @InjectView(R.id.standard_list_imageview4) ImageView imageView4;
     @InjectView(R.id.standard_list_imageview5) ImageView imageView5;
+    @InjectView(R.id.standard_list_custom_view) FutureStudioView customView;
 
     Context context = this;
 

@@ -38,6 +38,12 @@
             android:layout_height="300dp"
             android:layout_margin="5dp"/>
 
+        <io.futurestud.tutorials.glide.ui.views.FutureStudioView
+            android:id="@+id/standard_list_custom_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"/>
+
     </LinearLayout>
 </ScrollView>
 

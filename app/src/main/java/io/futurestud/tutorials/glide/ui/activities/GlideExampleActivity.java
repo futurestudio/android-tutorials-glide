@@ -11,7 +11,7 @@ import io.futurestud.tutorials.glide.R;
 import io.futurestud.tutorials.glide.ui.views.FutureStudioView;
 
 
-public class GlideExampleActivity extends AppCompatActivity {
+public abstract class GlideExampleActivity extends AppCompatActivity {
 
     public static String[] eatFoodyImages = {
             "http://i.imgur.com/rFLNqWI.jpg",
@@ -37,14 +37,14 @@ public class GlideExampleActivity extends AppCompatActivity {
     @InjectView(R.id.standard_list_imageview5) ImageView imageView5;
     @InjectView(R.id.standard_list_custom_view) FutureStudioView customView;
 
-    Context context = this;
+    Context context = GlideExampleActivity.this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
 
         setContentView( R.layout.activity_standard_imageview );
-        ButterKnife.inject( this );
+        ButterKnife.inject( GlideExampleActivity.this );
     }
 
 }

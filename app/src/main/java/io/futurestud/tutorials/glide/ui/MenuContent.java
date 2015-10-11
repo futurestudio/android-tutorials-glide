@@ -11,7 +11,7 @@ import io.futurestud.tutorials.glide.ui.activities.UsageExampleGridViewAdapter;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleImageResizing;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleListViewAdapter;
 import io.futurestud.tutorials.glide.ui.activities.UsageExamplePicassoBuilderRequestHandler;
-import io.futurestud.tutorials.glide.ui.activities.UsageExamplePlaceholdersAndErrors;
+import io.futurestud.tutorials.glide.ui.activities.UsageExamplePlaceholders;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleRequestPriority;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleSimpleLoading;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleTargetsAndRemoteViews;
@@ -39,7 +39,7 @@ public class MenuContent {
         addItem(new DummyItem("0", "Simple Image Loading", UsageExampleSimpleLoading.class));
         addItem(new DummyItem("1", "Adapter Use - ListView", UsageExampleListViewAdapter.class));
         addItem(new DummyItem("2", "Adapter Use - GridView", UsageExampleGridViewAdapter.class));
-        addItem(new DummyItem("3", "Placeholder, Error & Fading", UsageExamplePlaceholdersAndErrors.class));
+        addItem(new DummyItem("3", "Placeholder, Error & Fading", UsageExamplePlaceholders.class));
         addItem(new DummyItem("4", "Image Resizing, Scaling", UsageExampleImageResizing.class));
         addItem(new DummyItem("5", "Gif & Local Videos", UsageExampleGifAndVideos.class));
         addItem(new DummyItem("6", "Glide Cache Basics", UsageExampleCacheBasics.class));

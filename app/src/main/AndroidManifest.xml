@@ -42,8 +42,12 @@
             android:label="GridView Example"/>
 
         <activity
-            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExamplePlaceholdersAndErrors"
+            android:name=".ui.activities.UsageExamplePlaceholders"
             android:label="Placeholders"/>
+
+        <activity
+            android:name=".ui.activities.UsageExampleErrorLogging"
+            android:label="Erorr Logging"/>
 
         <activity
             android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleImageResizing"
@@ -84,6 +88,29 @@
         <activity
             android:name="io.futurestud.tutorials.glide.ui.activities.UsageExamplePicassoBuilderRequestHandler"
             android:label="Custom Request Handlers"/>
+
+        <receiver android:name=".ui.FSAppWidgetProvider">
+            <intent-filter>
+                <action
+                    android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget"/>
+        </receiver>
+
+        <receiver
+            android:name=".ui.FSAppWidgetIntentReceiver"
+            android:label="widgetBroadcastReceiver">
+            <intent-filter>
+                <action android:name="pl.looksok.intent.action.CHANGE_PICTURE"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget"/>
+        </receiver>
 
     </application>
 

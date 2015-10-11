@@ -11,7 +11,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
 
-public class UsageExamplePlaceholdersAndErrors extends AppCompatActivity {
+public class UsageExamplePlaceholders extends AppCompatActivity {
 
     @InjectView(R.id.standard_list_imageview1) ImageView imageViewPlaceholder;
     @InjectView(R.id.standard_list_imageview2) ImageView imageViewError;

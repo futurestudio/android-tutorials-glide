@@ -28,6 +28,8 @@ public class UsageExampleTargetsAndRemoteViews extends GlideExampleActivity {
     private SimpleTarget target = new SimpleTarget<Bitmap>() {
         @Override
         public void onResourceReady(Bitmap bitmap, GlideAnimation glideAnimation) {
+            // do something with the bitmap
+            // for demonstration purposes, let's set it to an imageview
             imageView1.setImageBitmap( bitmap );
         }
     };
@@ -48,8 +50,6 @@ public class UsageExampleTargetsAndRemoteViews extends GlideExampleActivity {
     @InjectView(R.id.standard_list_imageview4) ImageView imageView4;
     @InjectView(R.id.standard_list_imageview5) ImageView imageView5;
     @InjectView(R.id.standard_list_custom_view) FutureStudioView customView;
-
-    Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

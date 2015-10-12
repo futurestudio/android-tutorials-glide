@@ -19,6 +19,21 @@ public class UsageExampleErrorLogging extends GlideExampleActivity {
     @InjectView(R.id.standard_list_imageview4) ImageView imageViewCombined;
     @InjectView(R.id.standard_list_imageview5) ImageView imageViewNoPlaceholder;
 
+    private RequestListener<String, GlideDrawable> requestListener = new RequestListener<String, GlideDrawable>() {
+        @Override
+        public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
+            // todo log exception
+
+            // important to return false so the error placeholder can be placed
+            return false;
+        }
+
+        @Override
+        public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
+            return false;
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -30,20 +45,8 @@ public class UsageExampleErrorLogging extends GlideExampleActivity {
         Glide
                 .with( context )
                 .load(UsageExampleListViewAdapter.eatFoodyImages[0])
-                .listener( new RequestListener<String, GlideDrawable>() {
-                    @Override
-                    public boolean onException(Exception e, String model, Target<GlideDrawable> target, boolean isFirstResource) {
-                        // todo log exception
-
-                        // important to return false so the error placeholder can be placed
-                        return false;
-                    }
-
-                    @Override
-                    public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
-                        return false;
-                    }
-                } )
+                .listener( requestListener )
+                .error( R.drawable.cupcake )
                 .into( imageViewPlaceholder );
     }
 

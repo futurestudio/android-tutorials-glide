@@ -26,7 +26,7 @@ public class FSAppWidgetIntentReceiver extends BroadcastReceiver {
         remoteViews.setImageViewResource( R.id.custom_view_image, getImageToSet() );
 
         //REMEMBER TO ALWAYS REFRESH YOUR BUTTON CLICK LISTENERS!!!
-        remoteViews.setOnClickPendingIntent( R.id.custom_view_image, FSAppWidgetProvider.buildButtonPendingIntent( context ) );
+        //remoteViews.setOnClickPendingIntent( R.id.custom_view_image, FSAppWidgetProvider.buildButtonPendingIntent( context ) );
 
         FSAppWidgetProvider.pushWidgetUpdate( context.getApplicationContext(), remoteViews );
     }

@@ -7,7 +7,8 @@ import android.support.v8.renderscript.Element;
 import android.support.v8.renderscript.RenderScript;
 import android.support.v8.renderscript.ScriptIntrinsicBlur;
 
-import com.squareup.picasso.Transformation;
+import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool;
+import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 
 /**
  * The code in this class is based on:
@@ -15,19 +16,19 @@ import com.squareup.picasso.Transformation;
  * - https://gist.github.com/ryanbateman/6667995 (ryanbateman)
  * - https://futurestud.io/blog/how-to-use-the-renderscript-support-library-with-gradle-based-android-projects/
  */
-public class BlurTransformation implements Transformation {
+public class BlurTransformation extends BitmapTransformation {
 
-    RenderScript rs;
+    private RenderScript rs;
 
     public BlurTransformation(Context context) {
-        super();
-        rs = RenderScript.create(context);
+        super( context );
+
+        rs = RenderScript.create( context );
     }
 
     @Override
-    public Bitmap transform(Bitmap bitmap) {
-        // Create another bitmap that will hold the results of the filter.
-        Bitmap blurredBitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true);
+    protected Bitmap transform(BitmapPool pool, Bitmap toTransform, int outWidth, int outHeight) {
+        Bitmap blurredBitmap = toTransform.copy( Bitmap.Config.ARGB_8888, true );
 
         // Allocate memory for Renderscript to work with
         Allocation input = Allocation.createFromBitmap(rs, blurredBitmap, Allocation.MipmapControl.MIPMAP_FULL, Allocation.USAGE_SHARED);
@@ -46,13 +47,13 @@ public class BlurTransformation implements Transformation {
         // Copy the output to the blurred bitmap
         output.copyTo(blurredBitmap);
 
-        bitmap.recycle();
+        toTransform.recycle();
 
         return blurredBitmap;
     }
 
     @Override
-    public String key() {
+    public String getId() {
         return "blur";
     }
 }

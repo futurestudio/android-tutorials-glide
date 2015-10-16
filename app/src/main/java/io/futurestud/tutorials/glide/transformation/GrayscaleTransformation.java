@@ -16,7 +16,9 @@
 
 package io.futurestud.tutorials.glide.transformation;
 
+import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.ColorMatrix;
@@ -25,10 +27,8 @@ import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Transformation;
-
-import java.io.IOException;
+import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool;
+import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 
 import io.futurestud.tutorials.glide.R;
 
@@ -36,23 +36,20 @@ import static android.graphics.Bitmap.createBitmap;
 import static android.graphics.Paint.ANTI_ALIAS_FLAG;
 import static android.graphics.Shader.TileMode.REPEAT;
 
-public class GrayscaleTransformation implements Transformation {
+public class GrayscaleTransformation extends BitmapTransformation {
 
-    private final Picasso picasso;
+    private Context context;
 
-    public GrayscaleTransformation(Picasso picasso) {
-        this.picasso = picasso;
+    public GrayscaleTransformation(Context context) {
+        super( context );
+
+        this.context = context;
     }
 
     @Override
-    public Bitmap transform(Bitmap source) {
-        Bitmap result = createBitmap(source.getWidth(), source.getHeight(), source.getConfig());
-        Bitmap noise;
-        try {
-            noise = picasso.load(R.drawable.noise).get();
-        } catch (IOException e) {
-            throw new RuntimeException("Failed to apply transformation! Missing resource.");
-        }
+    protected Bitmap transform(BitmapPool pool, Bitmap toTransform, int outWidth, int outHeight) {
+        Bitmap result = createBitmap(toTransform.getWidth(), toTransform.getHeight(), toTransform.getConfig());
+        Bitmap noise =  BitmapFactory.decodeResource( context.getResources(), R.drawable.noise );
 
         BitmapShader shader = new BitmapShader(noise, REPEAT, REPEAT);
 
@@ -64,7 +61,7 @@ public class GrayscaleTransformation implements Transformation {
         paint.setColorFilter(filter);
 
         Canvas canvas = new Canvas(result);
-        canvas.drawBitmap(source, 0, 0, paint);
+        canvas.drawBitmap(toTransform, 0, 0, paint);
 
         paint.setColorFilter(null);
         paint.setShader(shader);
@@ -72,14 +69,14 @@ public class GrayscaleTransformation implements Transformation {
 
         canvas.drawRect(0, 0, canvas.getWidth(), canvas.getHeight(), paint);
 
-        source.recycle();
+        toTransform.recycle();
         noise.recycle();
 
         return result;
     }
 
     @Override
-    public String key() {
+    public String getId() {
         return "grayscaleTransformation()";
     }
 }

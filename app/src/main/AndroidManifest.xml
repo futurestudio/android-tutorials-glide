@@ -78,6 +78,10 @@
             android:label="Gif and Local Videos"/>
 
         <activity
+            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleTransformations"
+            android:label="Transformations"/>
+
+        <activity
             android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleLoggingAndStats"
             android:label="Cache Indicators, Logging and Stats"/>
 

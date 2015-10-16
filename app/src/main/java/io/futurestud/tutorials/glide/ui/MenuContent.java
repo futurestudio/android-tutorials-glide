@@ -16,6 +16,7 @@ import io.futurestud.tutorials.glide.ui.activities.UsageExampleRequestPriority;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleSimpleLoading;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleTargetsAndRemoteViews;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleThumbnails;
+import io.futurestud.tutorials.glide.ui.activities.UsageExampleTransformations;
 
 /**
  * Helper class for providing sample content for user interfaces created by
@@ -46,8 +47,8 @@ public class MenuContent {
         addItem(new DummyItem("7", "Glide Priority", UsageExampleRequestPriority.class));
         addItem(new DummyItem("8", "Thumbnails", UsageExampleThumbnails.class));
         addItem(new DummyItem("8", "Callbacks, Targets & Notifications", UsageExampleTargetsAndRemoteViews.class));
+        addItem(new DummyItem("9", "Transformation", UsageExampleTransformations.class));
 
-        addItem(new DummyItem("9", "Rotation and Transformation", UsageExamplePicassoBuilderRequestHandler.class));
         addItem(new DummyItem("10", "Influencing Image Caching", UsageExamplePicassoBuilderRequestHandler.class));
         addItem(new DummyItem("11", "Cache Indicators, Logging & Stats", UsageExamplePicassoBuilderRequestHandler.class));
         addItem(new DummyItem("12", "Picasso.Builder Basics", UsageExamplePicassoBuilderRequestHandler.class));

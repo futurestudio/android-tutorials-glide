@@ -6,16 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Transformation;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
-import io.futurestud.tutorials.glide.transformation.BlurTransformation;
-import io.futurestud.tutorials.glide.transformation.GrayscaleTransformation;
 
 @Deprecated
 public class UsageExampleRotationTransformation extends AppCompatActivity {
@@ -37,8 +31,8 @@ public class UsageExampleRotationTransformation extends AppCompatActivity {
 
         loadImageWithSimpleRotate();
         loadImageWithComplexRotate();
-        loadImageWithTransformation();
-        loadImageWithMultipleTransformation();
+        //loadImageWithTransformation();
+        //loadImageWithMultipleTransformation();
     }
 
     private void loadImageWithSimpleRotate() {
@@ -57,6 +51,7 @@ public class UsageExampleRotationTransformation extends AppCompatActivity {
                 .into(imageViewComplexRotate);
     }
 
+    /*
     private void loadImageWithTransformation() {
         Picasso
                 .with(context)
@@ -78,4 +73,5 @@ public class UsageExampleRotationTransformation extends AppCompatActivity {
                 .transform(transformations)
                 .into(imageViewTransformationsMultiple);
     }
+    */
 }

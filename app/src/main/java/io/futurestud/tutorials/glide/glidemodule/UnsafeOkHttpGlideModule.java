@@ -1,4 +1,4 @@
-package io.futurestud.tutorials.glide.okhttp;
+package io.futurestud.tutorials.glide.glidemodule;
 
 import android.content.Context;
 
@@ -8,6 +8,8 @@ import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.module.GlideModule;
 
 import java.io.InputStream;
+
+import io.futurestud.tutorials.glide.okhttp.OkHttpUrlLoader;
 
 public class UnsafeOkHttpGlideModule implements GlideModule {
         @Override

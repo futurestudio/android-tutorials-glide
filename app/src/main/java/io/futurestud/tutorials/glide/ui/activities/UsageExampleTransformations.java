@@ -24,6 +24,8 @@ public class UsageExampleTransformations extends GlideExampleActivity {
                 .with( context )
                 .load( eatFoodyImages[0] )
                 .transform( new BlurTransformation( context ) )
+                //.bitmapTransform( new BlurTransformation( context ) )
+                .fitCenter()
                 .into( imageView1 );
     }
 

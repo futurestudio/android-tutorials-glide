@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import io.futurestud.tutorials.glide.ui.activities.UsageExampleAnimate;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleCacheBasics;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleGifAndVideos;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleGridViewAdapter;
@@ -48,6 +49,7 @@ public class MenuContent {
         addItem(new DummyItem("8", "Thumbnails", UsageExampleThumbnails.class));
         addItem(new DummyItem("8", "Callbacks, Targets & Notifications", UsageExampleTargetsAndRemoteViews.class));
         addItem(new DummyItem("9", "Transformation", UsageExampleTransformations.class));
+        addItem(new DummyItem("9", "Animation", UsageExampleAnimate.class));
 
         addItem(new DummyItem("10", "Influencing Image Caching", UsageExamplePicassoBuilderRequestHandler.class));
         addItem(new DummyItem("11", "Cache Indicators, Logging & Stats", UsageExamplePicassoBuilderRequestHandler.class));

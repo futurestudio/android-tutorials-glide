@@ -17,6 +17,10 @@
             android:name="io.futurestud.tutorials.glide.glidemodule.SimpleGlideModule"
             android:value="GlideModule" />
 
+        <meta-data
+            android:name="io.futurestud.tutorials.glide.glidemodule.CustomImageSizeGlideModule"
+            android:value="GlideModule" />
+
         <!-- for images behind an unsafe https url -->
         <!--
         <meta-data
@@ -53,6 +57,10 @@
         <activity
             android:name=".ui.activities.UsageExampleErrorLogging"
             android:label="Erorr Logging"/>
+
+        <activity
+            android:name=".ui.activities.UsageExampleCustomImageSize"
+            android:label="Custom Image Sizes"/>
 
         <activity
             android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleImageResizing"

@@ -7,6 +7,7 @@ import java.util.Map;
 
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleAnimate;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleCacheBasics;
+import io.futurestud.tutorials.glide.ui.activities.UsageExampleCustomImageSize;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleGifAndVideos;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleGridViewAdapter;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleImageResizing;
@@ -38,23 +39,24 @@ public class MenuContent {
     public static Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
 
     static {
-        addItem(new DummyItem("0", "Simple Image Loading", UsageExampleSimpleLoading.class));
-        addItem(new DummyItem("1", "Adapter Use - ListView", UsageExampleListViewAdapter.class));
-        addItem(new DummyItem("2", "Adapter Use - GridView", UsageExampleGridViewAdapter.class));
-        addItem(new DummyItem("3", "Placeholder, Error & Fading", UsageExamplePlaceholders.class));
-        addItem(new DummyItem("4", "Image Resizing, Scaling", UsageExampleImageResizing.class));
-        addItem(new DummyItem("5", "Gif & Local Videos", UsageExampleGifAndVideos.class));
-        addItem(new DummyItem("6", "Glide Cache Basics", UsageExampleCacheBasics.class));
-        addItem(new DummyItem("7", "Glide Priority", UsageExampleRequestPriority.class));
-        addItem(new DummyItem("8", "Thumbnails", UsageExampleThumbnails.class));
-        addItem(new DummyItem("8", "Callbacks, Targets & Notifications", UsageExampleTargetsAndRemoteViews.class));
-        addItem(new DummyItem("9", "Transformation", UsageExampleTransformations.class));
-        addItem(new DummyItem("9", "Animation", UsageExampleAnimate.class));
+        addItem(new DummyItem( "Simple Image Loading", UsageExampleSimpleLoading.class));
+        addItem(new DummyItem( "Adapter Use - ListView", UsageExampleListViewAdapter.class));
+        addItem(new DummyItem( "Adapter Use - GridView", UsageExampleGridViewAdapter.class));
+        addItem(new DummyItem( "Placeholder, Error & Fading", UsageExamplePlaceholders.class));
+        addItem(new DummyItem( "Image Resizing, Scaling", UsageExampleImageResizing.class));
+        addItem(new DummyItem( "Gif & Local Videos", UsageExampleGifAndVideos.class));
+        addItem(new DummyItem( "Glide Cache Basics", UsageExampleCacheBasics.class));
+        addItem(new DummyItem( "Glide Priority", UsageExampleRequestPriority.class));
+        addItem(new DummyItem( "Thumbnails", UsageExampleThumbnails.class));
+        addItem(new DummyItem( "Callbacks, Targets & Notifications", UsageExampleTargetsAndRemoteViews.class));
+        addItem(new DummyItem( "Transformation", UsageExampleTransformations.class));
+        addItem(new DummyItem( "Animation", UsageExampleAnimate.class));
+        addItem(new DummyItem( "Custom Image Size", UsageExampleCustomImageSize.class));
 
-        addItem(new DummyItem("10", "Influencing Image Caching", UsageExamplePicassoBuilderRequestHandler.class));
-        addItem(new DummyItem("11", "Cache Indicators, Logging & Stats", UsageExamplePicassoBuilderRequestHandler.class));
-        addItem(new DummyItem("12", "Picasso.Builder Basics", UsageExamplePicassoBuilderRequestHandler.class));
-        addItem(new DummyItem("13", "Custom Request Handlers", UsageExamplePicassoBuilderRequestHandler.class));
+        addItem(new DummyItem( "Influencing Image Caching", UsageExamplePicassoBuilderRequestHandler.class));
+        addItem(new DummyItem( "Cache Indicators, Logging & Stats", UsageExamplePicassoBuilderRequestHandler.class));
+        addItem(new DummyItem( "Picasso.Builder Basics", UsageExamplePicassoBuilderRequestHandler.class));
+        addItem(new DummyItem( "Custom Request Handlers", UsageExamplePicassoBuilderRequestHandler.class));
     }
 
     private static void addItem(DummyItem item) {
@@ -70,7 +72,7 @@ public class MenuContent {
         public String content;
         public Class goalClass;
 
-        public DummyItem(String id, String content, Class goalClass) {
+        public DummyItem(String content, Class goalClass) {
             this.id = id;
             this.content = content;
             this.goalClass = goalClass;

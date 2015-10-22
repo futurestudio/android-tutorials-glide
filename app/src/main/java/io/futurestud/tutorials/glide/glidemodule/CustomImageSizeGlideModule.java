@@ -20,51 +20,50 @@ public class CustomImageSizeGlideModule implements GlideModule {
     }
 
     @Override public void registerComponents(Context context, Glide glide) {
-        // todo  change this to a factory
-        glide.register(MyDataModel.class, InputStream.class, new MyUrlLoaderFactory());
+        glide.register(CustomImageSizeModel.class, InputStream.class, new CustomImageSizeModelFactory());
     }
 
-    // way 1: dynamically via using();
-    public interface MyDataModel {
-        String buildUrl(int width, int height);
-    }
-
-    public static class MyDataModelImpl implements CustomImageSizeGlideModule.MyDataModel {
-
-        String baseImageUrl;
-
-        public MyDataModelImpl(String baseImageUrl) {
-            this.baseImageUrl = baseImageUrl;
-        }
-
-        @Override
-        public String buildUrl(int width, int height) {
-            return baseImageUrl + "?w=" + width + "&h=" + height;
-        }
-    }
-
-    public static class MyUrlLoader extends BaseGlideUrlLoader<MyDataModel> {
-        public MyUrlLoader(Context context) {
+    public static class CustomImageSizeUrlLoader extends BaseGlideUrlLoader<CustomImageSizeModel> {
+        public CustomImageSizeUrlLoader(Context context) {
             super( context );
         }
 
         @Override
-        protected String getUrl(MyDataModel model, int width, int height) {
-            // Construct the url for the correct size here.
-            return model.buildUrl(width, height);
+        protected String getUrl(CustomImageSizeModel model, int width, int height) {
+            return model.requestCustomSizeUrl( width, height );
         }
     }
 
-    // way 2: statically via GlideModule;
-    private class MyUrlLoaderFactory implements com.bumptech.glide.load.model.ModelLoaderFactory<MyDataModel, InputStream> {
+    // way 1: statically via GlideModule;
+    private class CustomImageSizeModelFactory implements com.bumptech.glide.load.model.ModelLoaderFactory<CustomImageSizeModel, InputStream> {
         @Override
-        public ModelLoader<MyDataModel, InputStream> build(Context context, GenericLoaderFactory factories) {
-            return new MyUrlLoader( context );
+        public ModelLoader<CustomImageSizeModel, InputStream> build(Context context, GenericLoaderFactory factories) {
+            return new CustomImageSizeUrlLoader( context );
         }
 
         @Override
         public void teardown() {
 
+        }
+    }
+
+    // way 2: dynamically via using();
+    public interface CustomImageSizeModel {
+        String requestCustomSizeUrl(int width, int height);
+    }
+
+    public static class CustomImageSizeModelFutureStudio implements CustomImageSizeModel {
+
+        String baseImageUrl;
+
+        public CustomImageSizeModelFutureStudio(String baseImageUrl) {
+            this.baseImageUrl = baseImageUrl;
+        }
+
+        @Override
+        public String requestCustomSizeUrl(int width, int height) {
+            // assumes the server understands the additional parameters of the image
+            return baseImageUrl + "?w=" + width + "&h=" + height;
         }
     }
 }

@@ -6,7 +6,7 @@ import com.bumptech.glide.Glide;
 
 import io.futurestud.tutorials.glide.glidemodule.CustomImageSizeGlideModule;
 
-import static io.futurestud.tutorials.glide.glidemodule.CustomImageSizeGlideModule.MyUrlLoader;
+import static io.futurestud.tutorials.glide.glidemodule.CustomImageSizeGlideModule.CustomImageSizeUrlLoader;
 
 public class UsageExampleCustomImageSize extends GlideExampleActivity {
 
@@ -17,21 +17,25 @@ public class UsageExampleCustomImageSize extends GlideExampleActivity {
         super.onCreate( savedInstanceState );
 
         loadImageWithCustomModel();
-        loadImageWithGlideModule();
+        //loadImageWithGlideModule();
     }
 
     private void loadImageWithCustomModel() {
+        CustomImageSizeGlideModule.CustomImageSizeModel customImageRequest = new CustomImageSizeGlideModule.CustomImageSizeModelFutureStudio( baseImageUrl );
+
         Glide
                 .with( context )
-                .using( new MyUrlLoader( context ) )
-                .load( new CustomImageSizeGlideModule.MyDataModelImpl(baseImageUrl) )
+                .using( new CustomImageSizeUrlLoader( context ) )
+                .load( customImageRequest )
                 .into( imageView1 );
     }
 
     private void loadImageWithGlideModule() {
+        CustomImageSizeGlideModule.CustomImageSizeModel customImageRequest = new CustomImageSizeGlideModule.CustomImageSizeModelFutureStudio( baseImageUrl );
+
         Glide
                 .with( context )
-                .load( new CustomImageSizeGlideModule.MyDataModelImpl( baseImageUrl ) )
+                .load( customImageRequest )
                 .into( imageView2 );
     }
 }

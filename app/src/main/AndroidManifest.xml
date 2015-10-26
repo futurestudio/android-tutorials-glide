@@ -71,16 +71,16 @@
             android:label="Cache Basics"/>
 
         <activity
+            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleAdvancedAdapter"
+            android:label="Advanced ListView"/>
+
+        <activity
             android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleThumbnails"
             android:label="Thumbnails"/>
 
         <activity
             android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleRequestPriority"
             android:label="Request Priority"/>
-
-        <activity
-            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleRotationTransformation"
-            android:label="Rotation and Transformation"/>
 
         <activity
             android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleTargetsAndRemoteViews"
@@ -99,16 +99,12 @@
             android:label="Animations"/>
 
         <activity
-            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleLoggingAndStats"
-            android:label="Cache Indicators, Logging and Stats"/>
+            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleDownload"
+            android:label="Download"/>
 
         <activity
             android:name=".ui.activities.UsageExampleGlideModuleUnsafeOkHttp"
             android:label="Picasso.Builder Basics"/>
-
-        <activity
-            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExamplePicassoBuilderRequestHandler"
-            android:label="Custom Request Handlers"/>
 
         <receiver android:name=".ui.FSAppWidgetProvider">
             <intent-filter>

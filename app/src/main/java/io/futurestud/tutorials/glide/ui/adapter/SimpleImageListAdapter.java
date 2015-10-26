@@ -14,13 +14,13 @@ import io.futurestud.tutorials.glide.R;
 /**
  * Created by norman on 4/10/15.
  */
-public class ImageListAdapter extends ArrayAdapter {
+public class SimpleImageListAdapter extends ArrayAdapter {
     private Context context;
     private LayoutInflater inflater;
 
     private String[] imageUrls;
 
-    public ImageListAdapter(Context context, String[] imageUrls) {
+    public SimpleImageListAdapter(Context context, String[] imageUrls) {
         super(context, R.layout.listview_item_image, imageUrls);
 
         this.context = context;

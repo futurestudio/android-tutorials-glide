@@ -1,14 +1,13 @@
 package io.futurestud.tutorials.glide.ui.activities;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.GridView;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
-import io.futurestud.tutorials.glide.ui.adapter.ImageListAdapter;
+import io.futurestud.tutorials.glide.ui.adapter.SimpleImageListAdapter;
 
 public class UsageExampleGridViewAdapter extends AppCompatActivity {
 
@@ -24,6 +23,6 @@ public class UsageExampleGridViewAdapter extends AppCompatActivity {
         setContentView(R.layout.activity_usage_example_gridview);
         ButterKnife.inject(this);
 
-        gridView.setAdapter(new ImageListAdapter(UsageExampleGridViewAdapter.this, UsageExampleListViewAdapter.eatFoodyImages));
+        gridView.setAdapter(new SimpleImageListAdapter(UsageExampleGridViewAdapter.this, UsageExampleListViewAdapter.eatFoodyImages));
     }
 }

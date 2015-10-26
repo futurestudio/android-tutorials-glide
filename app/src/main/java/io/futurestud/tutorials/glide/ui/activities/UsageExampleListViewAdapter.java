@@ -7,7 +7,7 @@ import android.widget.ListView;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
-import io.futurestud.tutorials.glide.ui.adapter.ImageListAdapter;
+import io.futurestud.tutorials.glide.ui.adapter.SimpleImageListAdapter;
 
 public class UsageExampleListViewAdapter extends AppCompatActivity {
 
@@ -40,6 +40,6 @@ public class UsageExampleListViewAdapter extends AppCompatActivity {
         setContentView(R.layout.activity_usage_example_listview);
         ButterKnife.inject(this);
 
-        listView.setAdapter(new ImageListAdapter(UsageExampleListViewAdapter.this, eatFoodyImages));
+        listView.setAdapter(new SimpleImageListAdapter(UsageExampleListViewAdapter.this, eatFoodyImages));
     }
 }

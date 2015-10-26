@@ -5,14 +5,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import io.futurestud.tutorials.glide.ui.activities.UsageExampleAdvancedAdapter;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleAnimate;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleCacheBasics;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleCustomImageSize;
+import io.futurestud.tutorials.glide.ui.activities.UsageExampleDownload;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleGifAndVideos;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleGridViewAdapter;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleImageResizing;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleListViewAdapter;
-import io.futurestud.tutorials.glide.ui.activities.UsageExamplePicassoBuilderRequestHandler;
 import io.futurestud.tutorials.glide.ui.activities.UsageExamplePlaceholders;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleRequestPriority;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleSimpleLoading;
@@ -42,6 +43,7 @@ public class MenuContent {
         addItem(new DummyItem( "Simple Image Loading", UsageExampleSimpleLoading.class));
         addItem(new DummyItem( "Adapter Use - ListView", UsageExampleListViewAdapter.class));
         addItem(new DummyItem( "Adapter Use - GridView", UsageExampleGridViewAdapter.class));
+        addItem(new DummyItem( "Adapter Use - Advanced", UsageExampleAdvancedAdapter.class));
         addItem(new DummyItem( "Placeholder, Error & Fading", UsageExamplePlaceholders.class));
         addItem(new DummyItem( "Image Resizing, Scaling", UsageExampleImageResizing.class));
         addItem(new DummyItem( "Gif & Local Videos", UsageExampleGifAndVideos.class));
@@ -52,11 +54,7 @@ public class MenuContent {
         addItem(new DummyItem( "Transformation", UsageExampleTransformations.class));
         addItem(new DummyItem( "Animation", UsageExampleAnimate.class));
         addItem(new DummyItem( "Custom Image Size", UsageExampleCustomImageSize.class));
-
-        addItem(new DummyItem( "Influencing Image Caching", UsageExamplePicassoBuilderRequestHandler.class));
-        addItem(new DummyItem( "Cache Indicators, Logging & Stats", UsageExamplePicassoBuilderRequestHandler.class));
-        addItem(new DummyItem( "Picasso.Builder Basics", UsageExamplePicassoBuilderRequestHandler.class));
-        addItem(new DummyItem( "Custom Request Handlers", UsageExamplePicassoBuilderRequestHandler.class));
+        addItem(new DummyItem( "Download Images", UsageExampleDownload.class));
     }
 
     private static void addItem(DummyItem item) {

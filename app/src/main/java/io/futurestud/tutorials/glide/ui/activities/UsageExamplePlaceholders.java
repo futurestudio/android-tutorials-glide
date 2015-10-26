@@ -31,6 +31,7 @@ public class UsageExamplePlaceholders extends AppCompatActivity {
         loadImageWithPlaceholder();
         loadImageWithError();
         loadImageNoAnimation();
+        loadImageFallback();
         loadImageCombination();
 
         loadImageWithNoPlaceholder();
@@ -48,7 +49,7 @@ public class UsageExamplePlaceholders extends AppCompatActivity {
         Glide
                 .with(context)
                 .load("http://futurestud.io/non_existing_image.png")
-                .error(R.mipmap.future_studio_launcher) // will be displayed if the image cannot be loaded
+                .error( R.mipmap.future_studio_launcher ) // will be displayed if the image cannot be loaded
                 .into( imageViewError );
     }
 
@@ -57,6 +58,16 @@ public class UsageExamplePlaceholders extends AppCompatActivity {
                 .with(context)
                 .load(UsageExampleListViewAdapter.eatFoodyImages[0])
                 .dontAnimate()
+                .into( imageViewNoFade );
+    }
+
+    private void loadImageFallback() {
+        String nullString = null; // could be set to null dynamically
+
+        Glide
+                .with(context)
+                .load( nullString )
+                .fallback( R.drawable.floorplan )
                 .into( imageViewNoFade );
     }
 

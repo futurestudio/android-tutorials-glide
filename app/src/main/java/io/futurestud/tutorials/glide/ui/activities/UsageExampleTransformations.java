@@ -5,7 +5,7 @@ import android.os.Bundle;
 import com.bumptech.glide.Glide;
 
 import io.futurestud.tutorials.glide.transformation.BlurTransformation;
-import io.futurestud.tutorials.glide.transformation.GrayscaleTransformation;
+import io.futurestud.tutorials.glide.transformation.RotateTransformation;
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
 public class UsageExampleTransformations extends GlideExampleActivity {
@@ -15,33 +15,53 @@ public class UsageExampleTransformations extends GlideExampleActivity {
         super.onCreate( savedInstanceState );
 
         loadImageOriginal();
-        loadImageThumbnailScale();
-        loadImageThumbnailRequest();
+        //loadImageTSingleTransformation();
+        //loadImageMultipleTransformations();
+        //loadImageTransformationLibrary();
+        loadImageRotate();
     }
 
     private void loadImageOriginal() {
         Glide
                 .with( context )
                 .load( eatFoodyImages[0] )
-                .transform( new BlurTransformation( context ) )
+                //.transform( new BlurTransformation( context ) )
                 //.bitmapTransform( new BlurTransformation( context ) )
-                .fitCenter()
                 .into( imageView1 );
     }
 
-    private void loadImageThumbnailScale() {
+    private void loadImageTSingleTransformation() {
         Glide
                 .with( context )
-                .load( eatFoodyImages[1] )
-                .transform( new GrayscaleTransformation( context ), new BlurTransformation( context ) )
+                .load( eatFoodyImages[0] )
+                //.transform( new BlurTransformation( context ) )
+                .bitmapTransform( new BlurTransformation( context ) )
                 .into( imageView2 );
     }
 
-    private void loadImageThumbnailRequest() {
+    private void loadImageMultipleTransformations() {
+        Glide
+                .with( context )
+                .load( eatFoodyImages[0] )
+                .transform( new RotateTransformation( context, 45f ))
+                //.transform( new GrayscaleTransformation( context ), new BlurTransformation( context ) )
+                .into( imageView2 );
+    }
+
+    private void loadImageTransformationLibrary() {
         Glide
                 .with( context )
                 .load( eatFoodyImages[2] )
                 .bitmapTransform( new jp.wasabeef.glide.transformations.BlurTransformation( context, 25, 2 ), new CropCircleTransformation( context ) )
                 .into( imageView3 );
+    }
+
+    private void loadImageRotate() {
+        Glide
+                .with( context )
+                .load( eatFoodyImages[0] )
+                .transform( new RotateTransformation( context, 90f ))
+                //.transform( new GrayscaleTransformation( context ), new BlurTransformation( context ) )
+                .into( imageView2 );
     }
 }

@@ -13,7 +13,10 @@ public class UsageExampleListViewAdapter extends AppCompatActivity {
 
     public static String[] eatFoodyImages = {
             "http://i.imgur.com/rFLNqWI.jpg",
+            "",
             "http://i.imgur.com/C9pBVt7.jpg",
+            "",
+            "",
             "http://i.imgur.com/rT5vXE1.jpg",
             "http://i.imgur.com/aIy5R2k.jpg",
             "http://i.imgur.com/MoJs9pT.jpg",

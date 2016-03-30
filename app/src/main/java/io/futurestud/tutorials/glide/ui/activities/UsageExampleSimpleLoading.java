@@ -11,8 +11,8 @@ import com.bumptech.glide.Glide;
 
 import java.io.File;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
 
 public class UsageExampleSimpleLoading extends AppCompatActivity {
@@ -20,10 +20,10 @@ public class UsageExampleSimpleLoading extends AppCompatActivity {
     public static final String ANDROID_RESOURCE = "android.resource://";
     public static final String FOREWARD_SLASH = "/";
 
-    @InjectView(R.id.simple_loading_internet) ImageView imageViewInternet;
-    @InjectView(R.id.simple_loading_resource) ImageView imageViewResource;
-    @InjectView(R.id.simple_loading_file) ImageView imageViewFile;
-    @InjectView(R.id.simple_loading_uri) ImageView imageViewUri;
+    @Bind(R.id.simple_loading_internet) ImageView imageViewInternet;
+    @Bind(R.id.simple_loading_resource) ImageView imageViewResource;
+    @Bind(R.id.simple_loading_file) ImageView imageViewFile;
+    @Bind(R.id.simple_loading_uri) ImageView imageViewUri;
 
     private Context context = this;
 
@@ -39,7 +39,7 @@ public class UsageExampleSimpleLoading extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_usage_example_simple_loading);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         loadImageByInternetUrl();
         loadImageByResourceId();

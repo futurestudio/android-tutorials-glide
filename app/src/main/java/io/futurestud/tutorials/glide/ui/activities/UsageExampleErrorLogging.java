@@ -8,16 +8,16 @@ import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 
-import butterknife.InjectView;
+import butterknife.Bind;
 import io.futurestud.tutorials.glide.R;
 
 public class UsageExampleErrorLogging extends GlideExampleActivity {
 
-    @InjectView(R.id.standard_list_imageview1) ImageView imageViewPlaceholder;
-    @InjectView(R.id.standard_list_imageview2) ImageView imageViewError;
-    @InjectView(R.id.standard_list_imageview3) ImageView imageViewNoFade;
-    @InjectView(R.id.standard_list_imageview4) ImageView imageViewCombined;
-    @InjectView(R.id.standard_list_imageview5) ImageView imageViewNoPlaceholder;
+    @Bind(R.id.standard_list_imageview1) ImageView imageViewPlaceholder;
+    @Bind(R.id.standard_list_imageview2) ImageView imageViewError;
+    @Bind(R.id.standard_list_imageview3) ImageView imageViewNoFade;
+    @Bind(R.id.standard_list_imageview4) ImageView imageViewCombined;
+    @Bind(R.id.standard_list_imageview5) ImageView imageViewNoPlaceholder;
 
     private RequestListener<String, GlideDrawable> requestListener = new RequestListener<String, GlideDrawable>() {
         @Override

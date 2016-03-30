@@ -8,15 +8,15 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
 
 public class UsageExampleRequestPriority extends AppCompatActivity {
 
-    @InjectView(R.id.activity_request_priority_hero) ImageView imageViewHero;
-    @InjectView(R.id.activity_request_priority_low_left) ImageView imageViewLowPrioLeft;
-    @InjectView(R.id.activity_request_priority_low_right) ImageView imageViewLowPrioRight;
+    @Bind(R.id.activity_request_priority_hero) ImageView imageViewHero;
+    @Bind(R.id.activity_request_priority_low_left) ImageView imageViewLowPrioLeft;
+    @Bind(R.id.activity_request_priority_low_right) ImageView imageViewLowPrioRight;
 
     private Context context = this;
 
@@ -25,7 +25,7 @@ public class UsageExampleRequestPriority extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView( R.layout.activity_request_priority );
-        ButterKnife.inject( this );
+        ButterKnife.bind( this );
 
         loadImageWithHighPriority();
         loadImagesWithLowPriority();

@@ -4,14 +4,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
 import io.futurestud.tutorials.glide.ui.adapter.AdvancedImageListAdapter;
 
 public class UsageExampleAdvancedAdapter extends AppCompatActivity {
 
-    @InjectView(R.id.usage_example_listview) ListView listView;
+    @Bind(R.id.usage_example_listview) ListView listView;
 
     public UsageExampleAdvancedAdapter() {
     }
@@ -21,7 +21,7 @@ public class UsageExampleAdvancedAdapter extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_usage_example_listview);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         listView.setAdapter(new AdvancedImageListAdapter(UsageExampleAdvancedAdapter.this, UsageExampleListViewAdapter.eatFoodyImages));
     }

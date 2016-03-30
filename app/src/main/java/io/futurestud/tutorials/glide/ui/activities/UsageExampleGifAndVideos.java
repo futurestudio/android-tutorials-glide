@@ -10,17 +10,17 @@ import com.bumptech.glide.Glide;
 
 import java.io.File;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
 
 public class UsageExampleGifAndVideos extends AppCompatActivity {
 
-    @InjectView(R.id.standard_list_imageview1) ImageView imageViewGif;
-    @InjectView(R.id.standard_list_imageview2) ImageView imageViewGifAsBitmap;
-    @InjectView(R.id.standard_list_imageview3) ImageView imageViewLocalVideo;
-    @InjectView(R.id.standard_list_imageview4) ImageView imageViewCombined;
-    @InjectView(R.id.standard_list_imageview5) ImageView imageViewNoPlaceholder;
+    @Bind(R.id.standard_list_imageview1) ImageView imageViewGif;
+    @Bind(R.id.standard_list_imageview2) ImageView imageViewGifAsBitmap;
+    @Bind(R.id.standard_list_imageview3) ImageView imageViewLocalVideo;
+    @Bind(R.id.standard_list_imageview4) ImageView imageViewCombined;
+    @Bind(R.id.standard_list_imageview5) ImageView imageViewNoPlaceholder;
 
     private Context context = this;
 
@@ -31,7 +31,7 @@ public class UsageExampleGifAndVideos extends AppCompatActivity {
         super.onCreate( savedInstanceState );
 
         setContentView( R.layout.activity_standard_imageview );
-        ButterKnife.inject( this );
+        ButterKnife.bind( this );
 
         loadGif();
         loadGifAsBitmap();

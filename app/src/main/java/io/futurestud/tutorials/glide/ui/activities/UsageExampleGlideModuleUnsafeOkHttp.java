@@ -7,16 +7,16 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
 
 public class UsageExampleGlideModuleUnsafeOkHttp extends AppCompatActivity {
 
-    @InjectView(R.id.standard_list_imageview1) ImageView imageView1;
-    @InjectView(R.id.standard_list_imageview2) ImageView imageView2;
-    @InjectView(R.id.standard_list_imageview3) ImageView imageView3;
-    @InjectView(R.id.standard_list_imageview4) ImageView imageView4;
+    @Bind(R.id.standard_list_imageview1) ImageView imageView1;
+    @Bind(R.id.standard_list_imageview2) ImageView imageView2;
+    @Bind(R.id.standard_list_imageview3) ImageView imageView3;
+    @Bind(R.id.standard_list_imageview4) ImageView imageView4;
 
     private Context context = this;
 
@@ -25,7 +25,7 @@ public class UsageExampleGlideModuleUnsafeOkHttp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_standard_imageview);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         loadImageViaUnsafeOkHttpPicassoInstance();
     }

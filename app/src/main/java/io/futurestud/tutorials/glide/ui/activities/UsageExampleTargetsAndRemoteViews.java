@@ -16,8 +16,8 @@ import com.bumptech.glide.request.target.NotificationTarget;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.ViewTarget;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
 import io.futurestud.tutorials.glide.ui.views.FutureStudioView;
 
@@ -44,19 +44,19 @@ public class UsageExampleTargetsAndRemoteViews extends GlideExampleActivity {
     private ViewTarget<FutureStudioView, GlideDrawable> viewTarget;
     private NotificationTarget notificationTarget;
 
-    @InjectView(R.id.standard_list_imageview1) ImageView imageView1;
-    @InjectView(R.id.standard_list_imageview2) ImageView imageView2;
-    @InjectView(R.id.standard_list_imageview3) ImageView imageView3;
-    @InjectView(R.id.standard_list_imageview4) ImageView imageView4;
-    @InjectView(R.id.standard_list_imageview5) ImageView imageView5;
-    @InjectView(R.id.standard_list_custom_view) FutureStudioView customView;
+    @Bind(R.id.standard_list_imageview1) ImageView imageView1;
+    @Bind(R.id.standard_list_imageview2) ImageView imageView2;
+    @Bind(R.id.standard_list_imageview3) ImageView imageView3;
+    @Bind(R.id.standard_list_imageview4) ImageView imageView4;
+    @Bind(R.id.standard_list_imageview5) ImageView imageView5;
+    @Bind(R.id.standard_list_custom_view) FutureStudioView customView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
 
         setContentView( R.layout.activity_standard_imageview );
-        ButterKnife.inject( this );
+        ButterKnife.bind( this );
 
         loadImageSimpleTarget();
         loadImageSimpleTargetApplicationContext();

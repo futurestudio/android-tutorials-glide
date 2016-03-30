@@ -7,16 +7,16 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
 
 public class UsageExampleCacheBasics extends GlideExampleActivity {
 
-    @InjectView(R.id.simple_loading_internet) ImageView imageViewInternet;
-    @InjectView(R.id.simple_loading_resource) ImageView imageViewResource;
-    @InjectView(R.id.simple_loading_file) ImageView imageViewFile;
-    @InjectView(R.id.simple_loading_uri) ImageView imageViewUri;
+    @Bind(R.id.simple_loading_internet) ImageView imageViewInternet;
+    @Bind(R.id.simple_loading_resource) ImageView imageViewResource;
+    @Bind(R.id.simple_loading_file) ImageView imageViewFile;
+    @Bind(R.id.simple_loading_uri) ImageView imageViewUri;
 
     private Context context = this;
 
@@ -25,7 +25,7 @@ public class UsageExampleCacheBasics extends GlideExampleActivity {
         super.onCreate( savedInstanceState );
 
         setContentView( R.layout.activity_usage_example_simple_loading );
-        ButterKnife.inject( this );
+        ButterKnife.bind( this );
 
         loadImageSkipMemory();
         loadImageSkipMemoryAndDisk();

@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import io.futurestud.tutorials.glide.R;
 import io.futurestud.tutorials.glide.ui.adapter.SimpleImageListAdapter;
 
@@ -31,7 +31,7 @@ public class UsageExampleListViewAdapter extends AppCompatActivity {
             "http://i.imgur.com/Z3QjilA.jpg",
     };
 
-    @InjectView(R.id.usage_example_listview) ListView listView;
+    @Bind(R.id.usage_example_listview) ListView listView;
 
     public UsageExampleListViewAdapter() {
     }
@@ -41,7 +41,7 @@ public class UsageExampleListViewAdapter extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_usage_example_listview);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         listView.setAdapter(new SimpleImageListAdapter(UsageExampleListViewAdapter.this, eatFoodyImages));
     }

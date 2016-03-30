@@ -1,12 +1,10 @@
 package io.futurestud.tutorials.glide.ui.activities;
 
-import android.animation.ObjectAnimator;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.FutureTarget;
-import com.bumptech.glide.request.animation.ViewPropertyAnimation;
 
 import java.io.File;
 import java.util.concurrent.ExecutionException;
@@ -17,11 +15,12 @@ public class UsageExampleDownload extends GlideExampleActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
 
-        loadImageAnimateResource();
-        loadImageAnimateCode();
+        Toast.makeText(UsageExampleDownload.this, "No visual demo, check the source code :)", Toast.LENGTH_LONG).show();
+
+        //downloadImage();
     }
 
-    private void loadImageAnimateResource() {
+    private void downloadImage() {
         FutureTarget<File> fileFutureTarget = Glide
                 .with( context )
                 .load( eatFoodyImages[0] )
@@ -36,22 +35,4 @@ public class UsageExampleDownload extends GlideExampleActivity {
         }
     }
 
-    private void loadImageAnimateCode() {
-        ViewPropertyAnimation.Animator animationObject = new ViewPropertyAnimation.Animator() {
-            @Override
-            public void animate(View view) {
-                view.setAlpha( 0f );
-
-                ObjectAnimator fadeAnim = ObjectAnimator.ofFloat( view, "alpha", 0f, 1f );
-                fadeAnim.setDuration( 2500 );
-                fadeAnim.start();
-            }
-        };
-
-        Glide
-                .with( context )
-                .load( eatFoodyImages[1] )
-                .animate( animationObject )
-                .into( imageView2 );
-    }
 }

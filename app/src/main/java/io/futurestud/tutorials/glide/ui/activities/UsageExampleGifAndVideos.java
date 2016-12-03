@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import java.io.File;
 
@@ -34,6 +35,7 @@ public class UsageExampleGifAndVideos extends AppCompatActivity {
         ButterKnife.bind( this );
 
         loadGif();
+        loadGifFast();
         loadGifAsBitmap();
         loaLocalVideo();
     }
@@ -45,6 +47,17 @@ public class UsageExampleGifAndVideos extends AppCompatActivity {
                 .load( gifUrl )
                 .asGif()
                 .error( R.drawable.full_cake )
+                .into( imageViewGif );
+    }
+
+    private void loadGifFast() {
+
+        Glide
+                .with( context )
+                .load( gifUrl )
+                .asGif()
+                .error( R.drawable.full_cake )
+                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
                 .into( imageViewGif );
     }
 

@@ -99,6 +99,10 @@
             android:label="Animations"/>
 
         <activity
+            android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleGlideUrl"
+            android:label="Glide URL"/>
+
+        <activity
             android:name="io.futurestud.tutorials.glide.ui.activities.UsageExampleDownload"
             android:label="Download"/>
 

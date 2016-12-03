@@ -32,6 +32,10 @@ android {
         }
     }
 
+    dexOptions {
+        javaMaxHeapSize "2g"
+    }
+
     // only necessary for ButterKnife, not for Glide!
     lintOptions {
         disable 'InvalidPackage'

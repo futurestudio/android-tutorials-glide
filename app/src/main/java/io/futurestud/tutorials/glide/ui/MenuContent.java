@@ -15,6 +15,7 @@ import io.futurestud.tutorials.glide.ui.activities.UsageExampleGlideUrl;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleGridViewAdapter;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleImageResizing;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleListViewAdapter;
+import io.futurestud.tutorials.glide.ui.activities.UsageExampleNetworkDependent;
 import io.futurestud.tutorials.glide.ui.activities.UsageExamplePlaceholders;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleRequestPriority;
 import io.futurestud.tutorials.glide.ui.activities.UsageExampleSimpleLoading;
@@ -55,6 +56,7 @@ public class MenuContent {
         addItem(new DummyItem( "Transformation", UsageExampleTransformations.class));
         addItem(new DummyItem( "Animation", UsageExampleAnimate.class));
         addItem(new DummyItem( "Custom Image Size", UsageExampleCustomImageSize.class));
+        addItem(new DummyItem( "Network-Dependent", UsageExampleNetworkDependent.class));
         addItem(new DummyItem( "Glide URL", UsageExampleGlideUrl.class));
         addItem(new DummyItem( "Download Images", UsageExampleDownload.class));
     }

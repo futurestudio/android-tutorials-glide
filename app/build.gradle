@@ -65,6 +65,7 @@ dependencies {
 
     // glide with extra transformations
     compile 'jp.wasabeef:glide-transformations:2.0.2'
+    compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1' // if GPU filters are needed
 
     // old stuff/helpers
     // image loading library Picasso

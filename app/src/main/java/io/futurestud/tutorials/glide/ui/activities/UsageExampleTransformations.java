@@ -15,9 +15,9 @@ public class UsageExampleTransformations extends GlideExampleActivity {
         super.onCreate( savedInstanceState );
 
         loadImageOriginal();
-        //loadImageTSingleTransformation();
-        //loadImageMultipleTransformations();
-        //loadImageTransformationLibrary();
+        loadImageTSingleTransformation();
+        loadImageMultipleTransformations();
+        loadImageTransformationLibrary();
         loadImageRotate();
     }
 
@@ -45,7 +45,7 @@ public class UsageExampleTransformations extends GlideExampleActivity {
                 .load( eatFoodyImages[0] )
                 .transform( new RotateTransformation( context, 45f ))
                 //.transform( new GrayscaleTransformation( context ), new BlurTransformation( context ) )
-                .into( imageView2 );
+                .into( imageView3 );
     }
 
     private void loadImageTransformationLibrary() {
@@ -53,7 +53,7 @@ public class UsageExampleTransformations extends GlideExampleActivity {
                 .with( context )
                 .load( eatFoodyImages[2] )
                 .bitmapTransform( new jp.wasabeef.glide.transformations.BlurTransformation( context, 25, 2 ), new CropCircleTransformation( context ) )
-                .into( imageView3 );
+                .into( imageView4 );
     }
 
     private void loadImageRotate() {
@@ -62,6 +62,6 @@ public class UsageExampleTransformations extends GlideExampleActivity {
                 .load( eatFoodyImages[0] )
                 .transform( new RotateTransformation( context, 90f ))
                 //.transform( new GrayscaleTransformation( context ), new BlurTransformation( context ) )
-                .into( imageView2 );
+                .into( imageView5 );
     }
 }

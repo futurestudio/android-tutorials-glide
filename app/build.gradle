@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.1"
+    buildToolsVersion "25.0.2"
 
     defaultConfig {
         applicationId "io.futurestud.tutorials.glide"
 
-        minSdkVersion 14
+        minSdkVersion 21
         targetSdkVersion 25
 
         versionCode 1
@@ -18,17 +18,14 @@ android {
     }
 
     buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-
-    productFlavors {
-        tutorial {
-            applicationId "io.futurestud.tutorials.glide"
-            versionCode 1
-            versionName "1.0.0"
         }
     }
 
@@ -48,27 +45,26 @@ android {
 
 dependencies {
     // Android's support library for the framework (not necessary for Picasso)
-    compile 'com.android.support:appcompat-v7:25.0.1'
-    compile 'com.android.support:support-v4:25.0.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
 
     // image loading library Glide
     compile 'com.github.bumptech.glide:glide:3.7.0'
 
     // glide with volley
-    //compile 'com.github.bumptech.glide:volley-integration:1.4.0@aar'
+    //compile 'com.github.bumptech.glide:volley-integration:1.5.0@aar'
     //compile 'com.mcxiaoke.volley:library:1.0.8'
 
     // glide with okhttp 2.x
-    //compile 'com.github.bumptech.glide:okhttp-integration:1.4.0@aar'
+    //compile 'com.github.bumptech.glide:okhttp-integration:1.5.0@aar'
     //compile 'com.squareup.okhttp:okhttp:2.7.5'
 
     // glide with okhttp 3.x
-    compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
-    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.github.bumptech.glide:okhttp3-integration:1.5.0@aar'
+    compile 'com.squareup.okhttp3:okhttp:3.8.0'
 
     // glide with extra transformations
-    compile 'jp.wasabeef:glide-transformations:2.0.0'
-    compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.3.0'
+    compile 'jp.wasabeef:glide-transformations:2.0.2'
 
     // old stuff/helpers
     // image loading library Picasso
@@ -76,6 +72,7 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp:2.7.5'
 
     // just a little view helper to makes things easier for us
-    // not necessary for using Picasso
-    compile 'com.jakewharton:butterknife:7.0.1'
+    // not necessary for using Glide
+    compile 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
 }

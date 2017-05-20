@@ -7,17 +7,17 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.futurestud.tutorials.glide.R;
 
 public class UsageExamplePlaceholders extends AppCompatActivity {
 
-    @Bind(R.id.standard_list_imageview1) ImageView imageViewPlaceholder;
-    @Bind(R.id.standard_list_imageview2) ImageView imageViewError;
-    @Bind(R.id.standard_list_imageview3) ImageView imageViewNoFade;
-    @Bind(R.id.standard_list_imageview4) ImageView imageViewCombined;
-    @Bind(R.id.standard_list_imageview5) ImageView imageViewNoPlaceholder;
+    @BindView(R.id.standard_list_imageview1) ImageView imageViewPlaceholder;
+    @BindView(R.id.standard_list_imageview2) ImageView imageViewError;
+    @BindView(R.id.standard_list_imageview3) ImageView imageViewNoFade;
+    @BindView(R.id.standard_list_imageview4) ImageView imageViewCombined;
+    @BindView(R.id.standard_list_imageview5) ImageView imageViewNoPlaceholder;
 
     private Context context = this;
 

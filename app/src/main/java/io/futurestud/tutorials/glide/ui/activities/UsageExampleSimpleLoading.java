@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide;
 
 import java.io.File;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.futurestud.tutorials.glide.R;
 
@@ -20,10 +20,10 @@ public class UsageExampleSimpleLoading extends AppCompatActivity {
     public static final String ANDROID_RESOURCE = "android.resource://";
     public static final String FOREWARD_SLASH = "/";
 
-    @Bind(R.id.simple_loading_internet) ImageView imageViewInternet;
-    @Bind(R.id.simple_loading_resource) ImageView imageViewResource;
-    @Bind(R.id.simple_loading_file) ImageView imageViewFile;
-    @Bind(R.id.simple_loading_uri) ImageView imageViewUri;
+    @BindView(R.id.simple_loading_internet) ImageView imageViewInternet;
+    @BindView(R.id.simple_loading_resource) ImageView imageViewResource;
+    @BindView(R.id.simple_loading_file) ImageView imageViewFile;
+    @BindView(R.id.simple_loading_uri) ImageView imageViewUri;
 
     private Context context = this;
 

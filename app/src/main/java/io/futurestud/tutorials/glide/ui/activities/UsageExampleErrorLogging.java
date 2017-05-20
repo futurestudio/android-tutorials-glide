@@ -8,16 +8,16 @@ import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import io.futurestud.tutorials.glide.R;
 
 public class UsageExampleErrorLogging extends GlideExampleActivity {
 
-    @Bind(R.id.standard_list_imageview1) ImageView imageViewPlaceholder;
-    @Bind(R.id.standard_list_imageview2) ImageView imageViewError;
-    @Bind(R.id.standard_list_imageview3) ImageView imageViewNoFade;
-    @Bind(R.id.standard_list_imageview4) ImageView imageViewCombined;
-    @Bind(R.id.standard_list_imageview5) ImageView imageViewNoPlaceholder;
+    @BindView(R.id.standard_list_imageview1) ImageView imageViewPlaceholder;
+    @BindView(R.id.standard_list_imageview2) ImageView imageViewError;
+    @BindView(R.id.standard_list_imageview3) ImageView imageViewNoFade;
+    @BindView(R.id.standard_list_imageview4) ImageView imageViewCombined;
+    @BindView(R.id.standard_list_imageview5) ImageView imageViewNoPlaceholder;
 
     private RequestListener<String, GlideDrawable> requestListener = new RequestListener<String, GlideDrawable>() {
         @Override

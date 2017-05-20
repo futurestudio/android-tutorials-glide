@@ -4,14 +4,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.GridView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.futurestud.tutorials.glide.R;
 import io.futurestud.tutorials.glide.ui.adapter.SimpleImageListAdapter;
 
 public class UsageExampleGridViewAdapter extends AppCompatActivity {
 
-    @Bind(R.id.usage_example_gridview) GridView gridView;
+    @BindView(R.id.usage_example_gridview) GridView gridView;
 
     public UsageExampleGridViewAdapter() {
     }

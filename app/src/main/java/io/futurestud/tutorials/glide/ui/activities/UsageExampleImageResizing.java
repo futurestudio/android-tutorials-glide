@@ -7,17 +7,17 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.futurestud.tutorials.glide.R;
 
 public class UsageExampleImageResizing extends AppCompatActivity {
 
-    @Bind(R.id.standard_list_imageview1) ImageView imageViewResize;
-    @Bind(R.id.standard_list_imageview2) ImageView imageViewResizeCenterCrop;
-    @Bind(R.id.standard_list_imageview3) ImageView imageViewResizeFitCenter;
-    @Bind(R.id.standard_list_imageview4) ImageView imageViewResizeScaleDown;
-    @Bind(R.id.standard_list_imageview5) ImageView imageViewFit;
+    @BindView(R.id.standard_list_imageview1) ImageView imageViewResize;
+    @BindView(R.id.standard_list_imageview2) ImageView imageViewResizeCenterCrop;
+    @BindView(R.id.standard_list_imageview3) ImageView imageViewResizeFitCenter;
+    @BindView(R.id.standard_list_imageview4) ImageView imageViewResizeScaleDown;
+    @BindView(R.id.standard_list_imageview5) ImageView imageViewFit;
 
     private Context context = this;
 

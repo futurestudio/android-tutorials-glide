@@ -16,15 +16,15 @@ import com.bumptech.glide.request.target.Target;
 import java.util.HashMap;
 import java.util.Map;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.futurestud.tutorials.glide.R;
 
 public class UsageExampleGlideUrl extends AppCompatActivity {
 
-    @Bind(R.id.standard_list_imageview1) ImageView imageView1;
-    @Bind(R.id.standard_list_imageview3) ImageView imageView2;
-    @Bind(R.id.standard_list_imageview4) ImageView imageView3;
+    @BindView(R.id.standard_list_imageview1) ImageView imageView1;
+    @BindView(R.id.standard_list_imageview3) ImageView imageView2;
+    @BindView(R.id.standard_list_imageview4) ImageView imageView3;
 
     private Context context = this;
 

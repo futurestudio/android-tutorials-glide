@@ -7,16 +7,16 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.futurestud.tutorials.glide.R;
 
 public class UsageExampleGlideModuleUnsafeOkHttp extends AppCompatActivity {
 
-    @Bind(R.id.standard_list_imageview1) ImageView imageView1;
-    @Bind(R.id.standard_list_imageview2) ImageView imageView2;
-    @Bind(R.id.standard_list_imageview3) ImageView imageView3;
-    @Bind(R.id.standard_list_imageview4) ImageView imageView4;
+    @BindView(R.id.standard_list_imageview1) ImageView imageView1;
+    @BindView(R.id.standard_list_imageview2) ImageView imageView2;
+    @BindView(R.id.standard_list_imageview3) ImageView imageView3;
+    @BindView(R.id.standard_list_imageview4) ImageView imageView4;
 
     private Context context = this;
 

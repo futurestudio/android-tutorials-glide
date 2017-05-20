@@ -8,15 +8,15 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.futurestud.tutorials.glide.R;
 
 public class UsageExampleRequestPriority extends AppCompatActivity {
 
-    @Bind(R.id.activity_request_priority_hero) ImageView imageViewHero;
-    @Bind(R.id.activity_request_priority_low_left) ImageView imageViewLowPrioLeft;
-    @Bind(R.id.activity_request_priority_low_right) ImageView imageViewLowPrioRight;
+    @BindView(R.id.activity_request_priority_hero) ImageView imageViewHero;
+    @BindView(R.id.activity_request_priority_low_left) ImageView imageViewLowPrioLeft;
+    @BindView(R.id.activity_request_priority_low_right) ImageView imageViewLowPrioRight;
 
     private Context context = this;
 

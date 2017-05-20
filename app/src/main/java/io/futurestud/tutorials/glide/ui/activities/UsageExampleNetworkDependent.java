@@ -11,16 +11,16 @@ import com.bumptech.glide.DrawableTypeRequest;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.futurestud.tutorials.glide.R;
 import io.futurestud.tutorials.glide.glidemodule.NetworkDisablingLoader;
 
 public class UsageExampleNetworkDependent extends AppCompatActivity {
 
-    @Bind(R.id.standard_list_imageview1) ImageView imageView1;
-    @Bind(R.id.standard_list_imageview3) ImageView imageView2;
-    @Bind(R.id.standard_list_imageview4) ImageView imageView3;
+    @BindView(R.id.standard_list_imageview1) ImageView imageView1;
+    @BindView(R.id.standard_list_imageview3) ImageView imageView2;
+    @BindView(R.id.standard_list_imageview4) ImageView imageView3;
 
     private Context context = this;
 

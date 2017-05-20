@@ -11,17 +11,17 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import java.io.File;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.futurestud.tutorials.glide.R;
 
 public class UsageExampleGifAndVideos extends AppCompatActivity {
 
-    @Bind(R.id.standard_list_imageview1) ImageView imageViewGif;
-    @Bind(R.id.standard_list_imageview2) ImageView imageViewGifAsBitmap;
-    @Bind(R.id.standard_list_imageview3) ImageView imageViewLocalVideo;
-    @Bind(R.id.standard_list_imageview4) ImageView imageViewCombined;
-    @Bind(R.id.standard_list_imageview5) ImageView imageViewNoPlaceholder;
+    @BindView(R.id.standard_list_imageview1) ImageView imageViewGif;
+    @BindView(R.id.standard_list_imageview2) ImageView imageViewGifAsBitmap;
+    @BindView(R.id.standard_list_imageview3) ImageView imageViewLocalVideo;
+    @BindView(R.id.standard_list_imageview4) ImageView imageViewCombined;
+    @BindView(R.id.standard_list_imageview5) ImageView imageViewNoPlaceholder;
 
     private Context context = this;
 

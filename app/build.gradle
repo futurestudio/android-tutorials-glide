@@ -49,7 +49,7 @@ dependencies {
     compile 'com.android.support:support-v4:25.3.1'
 
     // image loading library Glide
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.bumptech.glide:glide:3.8.0'
 
     // glide with volley
     //compile 'com.github.bumptech.glide:volley-integration:1.5.0@aar'

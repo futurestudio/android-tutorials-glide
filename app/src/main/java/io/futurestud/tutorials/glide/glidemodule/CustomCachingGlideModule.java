@@ -20,34 +20,34 @@ import com.bumptech.glide.module.GlideModule;
 public class CustomCachingGlideModule implements GlideModule {
     @Override
     public void applyOptions(Context context, GlideBuilder builder) {
-        builder.setDecodeFormat( DecodeFormat.PREFER_ARGB_8888 );
+        builder.setDecodeFormat(DecodeFormat.PREFER_ARGB_8888);
 
         // memory cache
-        MemorySizeCalculator calculator = new MemorySizeCalculator( context );
+        MemorySizeCalculator calculator = new MemorySizeCalculator(context);
         int defaultMemoryCacheSize = calculator.getMemoryCacheSize();
         int defaultBitmapPoolSize = calculator.getBitmapPoolSize();
 
         int customMemoryCacheSize = (int) (1.2 * defaultMemoryCacheSize);
         int customBitmapPoolSize = (int) (1.2 * defaultBitmapPoolSize);
 
-        builder.setMemoryCache( new LruResourceCache( customMemoryCacheSize ) );
-        builder.setBitmapPool( new LruBitmapPool( customBitmapPoolSize ) );
+        builder.setMemoryCache(new LruResourceCache(customMemoryCacheSize));
+        builder.setBitmapPool(new LruBitmapPool(customBitmapPoolSize));
 
         // disk cache
         // set size & external vs. internal
         int cacheSize100MegaBytes = 104857600;
 
         builder.setDiskCache(
-                new InternalCacheDiskCacheFactory( context, cacheSize100MegaBytes ) );
+                new InternalCacheDiskCacheFactory(context, cacheSize100MegaBytes));
 
         builder.setDiskCache(
-                new ExternalCacheDiskCacheFactory( context, cacheSize100MegaBytes ) );
+                new ExternalCacheDiskCacheFactory(context, cacheSize100MegaBytes));
 
         // set custom location
         String downloadDirectoryPath = Environment.getDownloadCacheDirectory().getPath();
 
         builder.setDiskCache(
-                new DiskLruCacheFactory( downloadDirectoryPath, cacheSize100MegaBytes ) );
+                new DiskLruCacheFactory(downloadDirectoryPath, cacheSize100MegaBytes));
 
         // In case you want to specify a cache folder ("glide"):
         //builder.setDiskCache(

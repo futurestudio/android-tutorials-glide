@@ -36,7 +36,7 @@ public class SimpleImageListAdapter extends ArrayAdapter {
         }
 
         Glide
-                .with( context )
+                .with(context)
                 .load(imageUrls[position])
                 .into((ImageView) convertView);
 

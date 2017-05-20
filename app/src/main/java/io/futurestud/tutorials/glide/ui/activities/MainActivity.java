@@ -27,7 +27,7 @@ public class MainActivity extends ListActivity {
     protected void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
 
-        showExampleActivity(MenuContent.ITEMS.get( position ).goalClass);
+        showExampleActivity(MenuContent.ITEMS.get(position).goalClass);
     }
 
     private void showExampleActivity(Class targetClass) {

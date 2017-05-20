@@ -24,8 +24,8 @@ public class UsageExampleRequestPriority extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView( R.layout.activity_request_priority );
-        ButterKnife.bind( this );
+        setContentView(R.layout.activity_request_priority);
+        ButterKnife.bind(this);
 
         loadImageWithHighPriority();
         loadImagesWithLowPriority();
@@ -35,39 +35,39 @@ public class UsageExampleRequestPriority extends AppCompatActivity {
 
     private void loadImageWithHighPriority() {
         Glide
-                .with( context )
-                .load( UsageExampleListViewAdapter.eatFoodyImages[0] )
-                .priority( Priority.HIGH )
-                .into( imageViewHero );
+                .with(context)
+                .load(UsageExampleListViewAdapter.eatFoodyImages[0])
+                .priority(Priority.HIGH)
+                .into(imageViewHero);
     }
 
     private void loadImagesWithLowPriority() {
         Glide
-                .with( context )
-                .load( UsageExampleListViewAdapter.eatFoodyImages[1] )
+                .with(context)
+                .load(UsageExampleListViewAdapter.eatFoodyImages[1])
                 .priority(Priority.LOW)
                 .into(imageViewLowPrioLeft);
 
         Glide
-                .with( context )
-                .load( UsageExampleListViewAdapter.eatFoodyImages[2] )
+                .with(context)
+                .load(UsageExampleListViewAdapter.eatFoodyImages[2])
                 .priority(Priority.LOW)
                 .into(imageViewLowPrioRight);
     }
 
     private void loadImageWithNormalPriority() {
         Glide
-                .with( context )
-                .load( UsageExampleListViewAdapter.eatFoodyImages[0] )
-                .priority( Priority.NORMAL )
-                .into( imageViewHero );
+                .with(context)
+                .load(UsageExampleListViewAdapter.eatFoodyImages[0])
+                .priority(Priority.NORMAL)
+                .into(imageViewHero);
     }
 
     private void loadImageWithImmediatePriority() {
         Glide
-                .with( context )
-                .load( UsageExampleListViewAdapter.eatFoodyImages[0] )
-                .priority( Priority.IMMEDIATE )
+                .with(context)
+                .load(UsageExampleListViewAdapter.eatFoodyImages[0])
+                .priority(Priority.IMMEDIATE)
                 .into(imageViewHero);
     }
 }

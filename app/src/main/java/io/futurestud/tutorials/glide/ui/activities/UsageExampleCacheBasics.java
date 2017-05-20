@@ -22,10 +22,10 @@ public class UsageExampleCacheBasics extends GlideExampleActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
+        super.onCreate(savedInstanceState);
 
-        setContentView( R.layout.activity_usage_example_simple_loading );
-        ButterKnife.bind( this );
+        setContentView(R.layout.activity_usage_example_simple_loading);
+        ButterKnife.bind(this);
 
         loadImageSkipMemory();
         loadImageSkipMemoryAndDisk();
@@ -35,34 +35,34 @@ public class UsageExampleCacheBasics extends GlideExampleActivity {
 
     private void loadImageSkipMemory() {
         Glide
-                .with( context )
-                .load( eatFoodyImages[0] )
-                .skipMemoryCache( true )
-                .into( imageViewInternet );
+                .with(context)
+                .load(eatFoodyImages[0])
+                .skipMemoryCache(true)
+                .into(imageViewInternet);
     }
 
     private void loadImageSkipMemoryAndDisk() {
         Glide
-                .with( context )
-                .load( eatFoodyImages[1] )
-                .diskCacheStrategy( DiskCacheStrategy.NONE )
-                .skipMemoryCache( true )
-                .into( imageViewResource );
+                .with(context)
+                .load(eatFoodyImages[1])
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .skipMemoryCache(true)
+                .into(imageViewResource);
     }
 
     private void loadImageDiskStrategySource() {
         Glide
-                .with( context )
-                .load( eatFoodyImages[2] )
-                .diskCacheStrategy( DiskCacheStrategy.SOURCE )
-                .into( imageViewFile );
+                .with(context)
+                .load(eatFoodyImages[2])
+                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                .into(imageViewFile);
     }
 
     private void loadImageDiskStrategyResult() {
         Glide
-                .with( context )
-                .load( eatFoodyImages[3] )
-                .diskCacheStrategy( DiskCacheStrategy.RESULT )
-                .into( imageViewUri );
+                .with(context)
+                .load(eatFoodyImages[3])
+                .diskCacheStrategy(DiskCacheStrategy.RESULT)
+                .into(imageViewUri);
     }
 }

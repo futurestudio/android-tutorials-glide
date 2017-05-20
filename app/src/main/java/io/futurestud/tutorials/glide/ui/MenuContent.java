@@ -42,23 +42,23 @@ public class MenuContent {
     public static Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
 
     static {
-        addItem(new DummyItem( "Simple Image Loading", UsageExampleSimpleLoading.class));
-        addItem(new DummyItem( "Adapter Use - ListView", UsageExampleListViewAdapter.class));
-        addItem(new DummyItem( "Adapter Use - GridView", UsageExampleGridViewAdapter.class));
-        addItem(new DummyItem( "Adapter Use - Advanced", UsageExampleAdvancedAdapter.class));
-        addItem(new DummyItem( "Placeholder, Error & Fading", UsageExamplePlaceholders.class));
-        addItem(new DummyItem( "Image Resizing, Scaling", UsageExampleImageResizing.class));
-        addItem(new DummyItem( "Gif & Local Videos", UsageExampleGifAndVideos.class));
-        addItem(new DummyItem( "Glide Cache Basics", UsageExampleCacheBasics.class));
-        addItem(new DummyItem( "Glide Priority", UsageExampleRequestPriority.class));
-        addItem(new DummyItem( "Thumbnails", UsageExampleThumbnails.class));
-        addItem(new DummyItem( "Callbacks, Targets & Notifications", UsageExampleTargetsAndRemoteViews.class));
-        addItem(new DummyItem( "Transformation", UsageExampleTransformations.class));
-        addItem(new DummyItem( "Animation", UsageExampleAnimate.class));
-        addItem(new DummyItem( "Custom Image Size", UsageExampleCustomImageSize.class));
-        addItem(new DummyItem( "Network-Dependent", UsageExampleNetworkDependent.class));
-        addItem(new DummyItem( "Glide URL", UsageExampleGlideUrl.class));
-        addItem(new DummyItem( "Download Images", UsageExampleDownload.class));
+        addItem(new DummyItem("Simple Image Loading", UsageExampleSimpleLoading.class));
+        addItem(new DummyItem("Adapter Use - ListView", UsageExampleListViewAdapter.class));
+        addItem(new DummyItem("Adapter Use - GridView", UsageExampleGridViewAdapter.class));
+        addItem(new DummyItem("Adapter Use - Advanced", UsageExampleAdvancedAdapter.class));
+        addItem(new DummyItem("Placeholder, Error & Fading", UsageExamplePlaceholders.class));
+        addItem(new DummyItem("Image Resizing, Scaling", UsageExampleImageResizing.class));
+        addItem(new DummyItem("Gif & Local Videos", UsageExampleGifAndVideos.class));
+        addItem(new DummyItem("Glide Cache Basics", UsageExampleCacheBasics.class));
+        addItem(new DummyItem("Glide Priority", UsageExampleRequestPriority.class));
+        addItem(new DummyItem("Thumbnails", UsageExampleThumbnails.class));
+        addItem(new DummyItem("Callbacks, Targets & Notifications", UsageExampleTargetsAndRemoteViews.class));
+        addItem(new DummyItem("Transformation", UsageExampleTransformations.class));
+        addItem(new DummyItem("Animation", UsageExampleAnimate.class));
+        addItem(new DummyItem("Custom Image Size", UsageExampleCustomImageSize.class));
+        addItem(new DummyItem("Network-Dependent", UsageExampleNetworkDependent.class));
+        addItem(new DummyItem("Glide URL", UsageExampleGlideUrl.class));
+        addItem(new DummyItem("Download Images", UsageExampleDownload.class));
     }
 
     private static void addItem(DummyItem item) {

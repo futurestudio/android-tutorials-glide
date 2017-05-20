@@ -41,7 +41,7 @@ public class GrayscaleTransformation extends BitmapTransformation {
     private Context context;
 
     public GrayscaleTransformation(Context context) {
-        super( context );
+        super(context);
 
         this.context = context;
     }
@@ -49,7 +49,7 @@ public class GrayscaleTransformation extends BitmapTransformation {
     @Override
     protected Bitmap transform(BitmapPool pool, Bitmap toTransform, int outWidth, int outHeight) {
         Bitmap result = createBitmap(toTransform.getWidth(), toTransform.getHeight(), toTransform.getConfig());
-        Bitmap noise =  BitmapFactory.decodeResource( context.getResources(), R.drawable.noise );
+        Bitmap noise = BitmapFactory.decodeResource(context.getResources(), R.drawable.noise);
 
         BitmapShader shader = new BitmapShader(noise, REPEAT, REPEAT);
 

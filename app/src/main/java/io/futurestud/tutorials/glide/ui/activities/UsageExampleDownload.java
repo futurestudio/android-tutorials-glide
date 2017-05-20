@@ -13,7 +13,7 @@ public class UsageExampleDownload extends GlideExampleActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
+        super.onCreate(savedInstanceState);
 
         Toast.makeText(UsageExampleDownload.this, "No visual demo, check the source code :)", Toast.LENGTH_LONG).show();
 
@@ -22,9 +22,9 @@ public class UsageExampleDownload extends GlideExampleActivity {
 
     private void downloadImage() {
         FutureTarget<File> fileFutureTarget = Glide
-                .with( context )
-                .load( eatFoodyImages[0] )
-                .downloadOnly( 500, 500 );
+                .with(context)
+                .load(eatFoodyImages[0])
+                .downloadOnly(500, 500);
 
         try {
             File file = fileFutureTarget.get();

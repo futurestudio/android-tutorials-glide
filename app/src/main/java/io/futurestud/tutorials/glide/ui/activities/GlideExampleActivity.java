@@ -41,10 +41,10 @@ public abstract class GlideExampleActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
+        super.onCreate(savedInstanceState);
 
-        setContentView( R.layout.activity_standard_imageview );
-        ButterKnife.bind( GlideExampleActivity.this );
+        setContentView(R.layout.activity_standard_imageview);
+        ButterKnife.bind(GlideExampleActivity.this);
     }
 
 }

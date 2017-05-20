@@ -36,18 +36,18 @@ public class UsageExampleErrorLogging extends GlideExampleActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
+        super.onCreate(savedInstanceState);
 
         loadImageWithErrorLogging();
     }
 
     private void loadImageWithErrorLogging() {
         Glide
-                .with( context )
+                .with(context)
                 .load(UsageExampleListViewAdapter.eatFoodyImages[0])
-                .listener( requestListener )
-                .error( R.drawable.cupcake )
-                .into( imageViewPlaceholder );
+                .listener(requestListener)
+                .error(R.drawable.cupcake)
+                .into(imageViewPlaceholder);
     }
 
 }

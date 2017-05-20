@@ -33,8 +33,8 @@ public class UsageExampleGlideModuleUnsafeOkHttp extends AppCompatActivity {
     private void loadImageViaUnsafeOkHttpPicassoInstance() {
 
         Glide
-                .with( context )
-                .load( "unsafe https image" )
+                .with(context)
+                .load("unsafe https image")
                 .into(imageView4);
 
 

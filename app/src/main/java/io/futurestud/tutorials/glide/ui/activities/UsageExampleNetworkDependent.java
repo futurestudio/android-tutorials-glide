@@ -64,9 +64,9 @@ public class UsageExampleNetworkDependent extends AppCompatActivity {
                     .using(new NetworkDisablingLoader())
                     .load("http://www.placehold.it/750x750")
                     .thumbnail(
-                        Glide
-                                .with(context)
-                                .load("http://www.placehold.it/100x100")
+                            Glide
+                                    .with(context)
+                                    .load("http://www.placehold.it/100x100")
                     )
                     .into(imageView1);
 

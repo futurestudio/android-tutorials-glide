@@ -10,7 +10,7 @@ public class UsageExampleThumbnails extends GlideExampleActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
+        super.onCreate(savedInstanceState);
 
         loadImageOriginal();
         loadImageThumbnailScale();
@@ -19,37 +19,37 @@ public class UsageExampleThumbnails extends GlideExampleActivity {
 
     private void loadImageOriginal() {
         Glide
-                .with( context )
-                .load( eatFoodyImages[0] )
-                .skipMemoryCache( true )
-                .diskCacheStrategy( DiskCacheStrategy.NONE )
-                .into( imageView1 );
+                .with(context)
+                .load(eatFoodyImages[0])
+                .skipMemoryCache(true)
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .into(imageView1);
     }
 
     private void loadImageThumbnailScale() {
         Glide
-                .with( context )
-                .load( eatFoodyImages[1] )
-                .skipMemoryCache( true )
-                .diskCacheStrategy( DiskCacheStrategy.NONE )
-                .thumbnail( 0.1f )
-                .into( imageView2 );
+                .with(context)
+                .load(eatFoodyImages[1])
+                .skipMemoryCache(true)
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .thumbnail(0.1f)
+                .into(imageView2);
     }
 
     private void loadImageThumbnailRequest() {
         DrawableRequestBuilder<String> thumbnailRequest = Glide
-                .with( context )
-                .load( eatFoodyImages[2] )
-                .skipMemoryCache( true )
-                .diskCacheStrategy( DiskCacheStrategy.NONE );
+                .with(context)
+                .load(eatFoodyImages[2])
+                .skipMemoryCache(true)
+                .diskCacheStrategy(DiskCacheStrategy.NONE);
 
         Glide
-                .with( context )
-                .load( UsageExampleGifAndVideos.gifUrl )
-                .skipMemoryCache( true )
-                .diskCacheStrategy( DiskCacheStrategy.NONE )
-                .thumbnail( thumbnailRequest )
-                .into( imageView3 );
+                .with(context)
+                .load(UsageExampleGifAndVideos.gifUrl)
+                .skipMemoryCache(true)
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .thumbnail(thumbnailRequest)
+                .into(imageView3);
     }
 
 }

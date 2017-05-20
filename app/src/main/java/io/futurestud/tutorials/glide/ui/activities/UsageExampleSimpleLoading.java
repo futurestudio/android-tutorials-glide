@@ -51,7 +51,7 @@ public class UsageExampleSimpleLoading extends AppCompatActivity {
         // the url could be any image URL, which is accessible with a normal HTTP GET request
         String internetUrl = "http://i.imgur.com/DvpvklR.png";
         Glide
-                .with( context )
+                .with(context)
                 .load(internetUrl)
                 .into(imageViewInternet);
     }

@@ -23,10 +23,10 @@ public class UsageExamplePlaceholders extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
+        super.onCreate(savedInstanceState);
 
-        setContentView( R.layout.activity_standard_imageview );
-        ButterKnife.bind( this );
+        setContentView(R.layout.activity_standard_imageview);
+        ButterKnife.bind(this);
 
         loadImageWithPlaceholder();
         loadImageWithError();
@@ -39,18 +39,18 @@ public class UsageExamplePlaceholders extends AppCompatActivity {
 
     private void loadImageWithPlaceholder() {
         Glide
-                .with( context )
+                .with(context)
                 .load(UsageExampleListViewAdapter.eatFoodyImages[0])
-                .placeholder( R.mipmap.ic_launcher ) // can also be a drawable
-                .into( imageViewPlaceholder );
+                .placeholder(R.mipmap.ic_launcher) // can also be a drawable
+                .into(imageViewPlaceholder);
     }
 
     private void loadImageWithError() {
         Glide
                 .with(context)
                 .load("http://futurestud.io/non_existing_image.png")
-                .error( R.mipmap.future_studio_launcher ) // will be displayed if the image cannot be loaded
-                .into( imageViewError );
+                .error(R.mipmap.future_studio_launcher) // will be displayed if the image cannot be loaded
+                .into(imageViewError);
     }
 
     private void loadImageNoAnimation() {
@@ -58,7 +58,7 @@ public class UsageExamplePlaceholders extends AppCompatActivity {
                 .with(context)
                 .load(UsageExampleListViewAdapter.eatFoodyImages[0])
                 .dontAnimate()
-                .into( imageViewNoFade );
+                .into(imageViewNoFade);
     }
 
     private void loadImageFallback() {
@@ -66,9 +66,9 @@ public class UsageExamplePlaceholders extends AppCompatActivity {
 
         Glide
                 .with(context)
-                .load( nullString )
-                .fallback( R.drawable.floorplan )
-                .into( imageViewNoFade );
+                .load(nullString)
+                .fallback(R.drawable.floorplan)
+                .into(imageViewNoFade);
     }
 
     private void loadImageCombination() {
@@ -77,8 +77,8 @@ public class UsageExamplePlaceholders extends AppCompatActivity {
                 .load(UsageExampleListViewAdapter.eatFoodyImages[0])
                 .placeholder(R.mipmap.ic_launcher) // can also be a drawable
                 .error(R.mipmap.future_studio_launcher) // will be displayed if the image cannot be loaded
-                .crossFade( 1000 )
-                .into( imageViewCombined );
+                .crossFade(1000)
+                .into(imageViewCombined);
     }
 
     private void loadImageWithNoPlaceholder() {

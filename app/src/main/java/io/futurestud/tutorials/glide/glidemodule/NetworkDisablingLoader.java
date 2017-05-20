@@ -12,14 +12,26 @@ import java.io.InputStream;
  */
 
 public class NetworkDisablingLoader implements StreamModelLoader<String> {
-    @Override public DataFetcher<InputStream> getResourceFetcher(final String model, int width, int height) {
+    @Override
+    public DataFetcher<InputStream> getResourceFetcher(final String model, int width, int height) {
         return new DataFetcher<InputStream>() {
-            @Override public InputStream loadData(Priority priority) throws Exception {
+            @Override
+            public InputStream loadData(Priority priority) throws Exception {
                 throw new IOException("Forced Glide network failure");
             }
-            @Override public void cleanup() { }
-            @Override public String getId() { return model; }
-            @Override public void cancel() { }
+
+            @Override
+            public void cleanup() {
+            }
+
+            @Override
+            public String getId() {
+                return model;
+            }
+
+            @Override
+            public void cancel() {
+            }
         };
     }
 }

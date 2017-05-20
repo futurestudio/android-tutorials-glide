@@ -14,28 +14,28 @@ public class UsageExampleCustomImageSize extends GlideExampleActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
+        super.onCreate(savedInstanceState);
 
         loadImageWithCustomModel();
         //loadImageWithGlideModule();
     }
 
     private void loadImageWithCustomModel() {
-        CustomImageSizeGlideModule.CustomImageSizeModel customImageRequest = new CustomImageSizeGlideModule.CustomImageSizeModelFutureStudio( baseImageUrl );
+        CustomImageSizeGlideModule.CustomImageSizeModel customImageRequest = new CustomImageSizeGlideModule.CustomImageSizeModelFutureStudio(baseImageUrl);
 
         Glide
-                .with( context )
-                .using( new CustomImageSizeUrlLoader( context ) )
-                .load( customImageRequest )
-                .into( imageView1 );
+                .with(context)
+                .using(new CustomImageSizeUrlLoader(context))
+                .load(customImageRequest)
+                .into(imageView1);
     }
 
     private void loadImageWithGlideModule() {
-        CustomImageSizeGlideModule.CustomImageSizeModel customImageRequest = new CustomImageSizeGlideModule.CustomImageSizeModelFutureStudio( baseImageUrl );
+        CustomImageSizeGlideModule.CustomImageSizeModel customImageRequest = new CustomImageSizeGlideModule.CustomImageSizeModelFutureStudio(baseImageUrl);
 
         Glide
-                .with( context )
-                .load( customImageRequest )
-                .into( imageView2 );
+                .with(context)
+                .load(customImageRequest)
+                .into(imageView2);
     }
 }

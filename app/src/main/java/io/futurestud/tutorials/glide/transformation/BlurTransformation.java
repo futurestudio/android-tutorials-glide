@@ -21,14 +21,14 @@ public class BlurTransformation extends BitmapTransformation {
     private RenderScript rs;
 
     public BlurTransformation(Context context) {
-        super( context );
+        super(context);
 
-        rs = RenderScript.create( context );
+        rs = RenderScript.create(context);
     }
 
     @Override
     protected Bitmap transform(BitmapPool pool, Bitmap toTransform, int outWidth, int outHeight) {
-        Bitmap blurredBitmap = toTransform.copy( Bitmap.Config.ARGB_8888, true );
+        Bitmap blurredBitmap = toTransform.copy(Bitmap.Config.ARGB_8888, true);
 
         // Allocate memory for Renderscript to work with
         Allocation input = Allocation.createFromBitmap(rs, blurredBitmap, Allocation.MipmapControl.MIPMAP_FULL, Allocation.USAGE_SHARED);

@@ -22,12 +22,12 @@ public class AdvancedImageListAdapter extends ArrayAdapter {
     private String[] imageUrls;
 
     public AdvancedImageListAdapter(Context context, String[] imageUrls) {
-        super( context, R.layout.listview_item_image, imageUrls );
+        super(context, R.layout.listview_item_image, imageUrls);
 
         this.context = context;
         this.imageUrls = imageUrls;
 
-        inflater = LayoutInflater.from( context );
+        inflater = LayoutInflater.from(context);
     }
 
     @Override
@@ -35,25 +35,26 @@ public class AdvancedImageListAdapter extends ArrayAdapter {
         ViewHolder viewHolder;
 
         if (null == convertView) {
-            convertView = inflater.inflate( R.layout.listview_item_advanced, parent, false );
+            convertView = inflater.inflate(R.layout.listview_item_advanced, parent, false);
 
             viewHolder = new ViewHolder();
-            viewHolder.text = (TextView) convertView.findViewById( R.id.listview_item_advanced_text );
-            viewHolder.icon = (ImageView) convertView.findViewById( R.id.listview_item_advanced_imageview );
+            viewHolder.text = (TextView) convertView.findViewById(R.id.listview_item_advanced_text);
+            viewHolder.icon = (ImageView) convertView.findViewById(R.id.listview_item_advanced_imageview);
 
-            convertView.setTag( viewHolder );
-        } else {
+            convertView.setTag(viewHolder);
+        }
+        else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        viewHolder.text.setText( "Position " + position );
+        viewHolder.text.setText("Position " + position);
 
         Glide
-                .with( context )
-                .load( imageUrls[position] )
+                .with(context)
+                .load(imageUrls[position])
                 .asBitmap()
                 .centerCrop()
-                .into( viewHolder.icon );
+                .into(viewHolder.icon);
 
         return convertView;
     }

@@ -23,10 +23,10 @@ public class UsageExampleImageResizing extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState );
+        super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_standard_imageview );
-        ButterKnife.bind(this );
+        setContentView(R.layout.activity_standard_imageview);
+        ButterKnife.bind(this);
 
         loadImageWithResize();
         loadImageWithResizeCenterCrop();
@@ -36,19 +36,19 @@ public class UsageExampleImageResizing extends AppCompatActivity {
 
     private void loadImageWithResize() {
         Glide
-                .with( context )
-                .load(UsageExampleListViewAdapter.eatFoodyImages[0] )
-                .override( 600, 200 ) // resizes the image to these dimensions (in pixel). does not respect aspect ratio
-                .into(imageViewResize );
+                .with(context)
+                .load(UsageExampleListViewAdapter.eatFoodyImages[0])
+                .override(600, 200) // resizes the image to these dimensions (in pixel). does not respect aspect ratio
+                .into(imageViewResize);
     }
 
     private void loadImageWithResizeCenterCrop() {
         Glide
                 .with(context)
                 .load(UsageExampleListViewAdapter.eatFoodyImages[0])
-                .override( 600, 200 ) // resizes the image to these dimensions (in pixel)
+                .override(600, 200) // resizes the image to these dimensions (in pixel)
                 .centerCrop() // this cropping technique scales the image so that it fills the requested bounds and then crops the extra.
-                .into(imageViewResizeCenterCrop );
+                .into(imageViewResizeCenterCrop);
     }
 
     private void loadImageWithResizeFitCenter() {
@@ -57,7 +57,7 @@ public class UsageExampleImageResizing extends AppCompatActivity {
                 .load(UsageExampleListViewAdapter.eatFoodyImages[0])
                 .override(600, 200)
                 .fitCenter() // this scales the image so that both dimensions are equal to or less than the requested bounds.
-                .into( imageViewResizeFitCenter );
+                .into(imageViewResizeFitCenter);
     }
 
     private void loadImageWithResizeScaleDown() {
